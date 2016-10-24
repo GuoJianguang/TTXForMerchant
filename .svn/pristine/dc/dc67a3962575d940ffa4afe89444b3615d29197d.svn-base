@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccountInNewViewController">
+            <connections>
+                <outlet property="sortView" destination="oYS-Ud-l4q" id="ne0-Sb-nhY"/>
+                <outlet property="swipeView" destination="YlQ-Pf-16k" id="MYO-1j-gwN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYS-Ud-l4q" customClass="SortButtonSwitchView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="yKf-Ba-vY9"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlQ-Pf-16k" customClass="SwipeView">
+                    <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="YlQ-Pf-16k" firstAttribute="top" secondItem="oYS-Ud-l4q" secondAttribute="bottom" id="1Hj-Av-Knl"/>
+                <constraint firstAttribute="trailing" secondItem="YlQ-Pf-16k" secondAttribute="trailing" id="4f9-nZ-I6K"/>
+                <constraint firstAttribute="bottom" secondItem="YlQ-Pf-16k" secondAttribute="bottom" id="Q7s-Fz-41f"/>
+                <constraint firstItem="YlQ-Pf-16k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vzf-Ex-Ebo"/>
+                <constraint firstItem="oYS-Ud-l4q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="aeU-6P-AQy"/>
+                <constraint firstAttribute="trailing" secondItem="oYS-Ud-l4q" secondAttribute="trailing" id="lHq-IG-AQL"/>
+                <constraint firstItem="oYS-Ud-l4q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wXA-x9-qcc"/>
+            </constraints>
+            <point key="canvasLocation" x="312" y="210"/>
+        </view>
+    </objects>
+</document>

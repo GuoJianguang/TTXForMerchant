@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="104" id="KGk-i7-Jjw" customClass="InformationDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="103.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvu-qR-vCx">
+                        <rect key="frame" x="10" y="10" width="300" height="93"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天添薪重庆分公司开业啦" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOl-CS-wR9">
+                                <rect key="frame" x="139.5" y="8" width="152" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.12.11" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwP-3r-VtA">
+                                <rect key="frame" x="139.5" y="69" width="152.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NTi-DD-KFV">
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NTi-DD-KFV" secondAttribute="height" multiplier="400:286" id="Drx-6G-m17"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jOl-CS-wR9" firstAttribute="leading" secondItem="NTi-DD-KFV" secondAttribute="trailing" constant="10" id="2SW-uC-Gea"/>
+                            <constraint firstAttribute="bottom" secondItem="NTi-DD-KFV" secondAttribute="bottom" id="7YC-e9-tce"/>
+                            <constraint firstItem="RwP-3r-VtA" firstAttribute="leading" secondItem="NTi-DD-KFV" secondAttribute="trailing" constant="10" id="De4-d4-jn4"/>
+                            <constraint firstItem="jOl-CS-wR9" firstAttribute="top" secondItem="pvu-qR-vCx" secondAttribute="top" constant="8" id="GVr-vz-QPx"/>
+                            <constraint firstAttribute="trailing" secondItem="RwP-3r-VtA" secondAttribute="trailing" constant="8" id="NiA-zX-8HK"/>
+                            <constraint firstAttribute="bottom" secondItem="RwP-3r-VtA" secondAttribute="bottom" constant="8" id="OBl-8p-NHK"/>
+                            <constraint firstItem="NTi-DD-KFV" firstAttribute="leading" secondItem="pvu-qR-vCx" secondAttribute="leading" id="chE-dw-EGe"/>
+                            <constraint firstAttribute="trailing" secondItem="jOl-CS-wR9" secondAttribute="trailing" constant="8" id="h9h-oW-2WU"/>
+                            <constraint firstItem="NTi-DD-KFV" firstAttribute="top" secondItem="pvu-qR-vCx" secondAttribute="top" id="syu-sN-8W9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="pvu-qR-vCx" secondAttribute="trailing" constant="10" id="1hM-6M-CI9"/>
+                    <constraint firstItem="pvu-qR-vCx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dZa-fp-2TS"/>
+                    <constraint firstAttribute="bottom" secondItem="pvu-qR-vCx" secondAttribute="bottom" id="hLX-V3-dmW"/>
+                    <constraint firstItem="pvu-qR-vCx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rjM-XQ-Wu8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="detailImage" destination="NTi-DD-KFV" id="07o-A8-UcQ"/>
+                <outlet property="itemView" destination="pvu-qR-vCx" id="8Sg-3B-Faf"/>
+                <outlet property="timeLabel" destination="RwP-3r-VtA" id="MQZ-Mi-R1q"/>
+                <outlet property="titleLabel" destination="jOl-CS-wR9" id="F8a-6O-gZg"/>
+            </connections>
+            <point key="canvasLocation" x="420" y="138"/>
+        </tableViewCell>
+    </objects>
+</document>

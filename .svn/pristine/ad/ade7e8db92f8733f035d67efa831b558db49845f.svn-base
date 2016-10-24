@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6d25ec79-ca60-9842-87a5-993906681732++9362",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "6d25ec79-ca60-9842-87a5-993906681732++9362" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6d25ec79-ca60-9842-87a5-993906681732++9362" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "004A506B-D48B-4244-A057-B5EEE38A1347",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6d25ec79-ca60-9842-87a5-993906681732++9362" : "%E5%A4%A9%E6%B7%BB%E8%96%AAios%EF%BC%88%E5%95%86%E5%AE%B6%E7%89%88%EF%BC%89\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TianTianXinForMerchant",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TianTianXinForMerchant.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.250\/svn\/fxpf",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6d25ec79-ca60-9842-87a5-993906681732++9362"
+    }
+  ]
+}

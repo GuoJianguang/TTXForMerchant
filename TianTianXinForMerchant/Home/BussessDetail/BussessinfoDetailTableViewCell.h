@@ -1,0 +1,29 @@
+//
+//  BussessinfoDetailTableViewCell.h
+//  天添薪
+//
+//  Created by ttx on 16/1/6.
+//  Copyright © 2016年 ttx. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "BussessDetailModel.h"
+
+@interface BussessinfoDetailTableViewCell : UITableViewCell
+
+//返回重用标示
++ (NSString *)indentify;
+//创建xib中的cell
++ (id)newCell;
+
+@property (weak, nonatomic) IBOutlet UIView *show_view;
+
+@property (weak, nonatomic) IBOutlet UILabel *introduce_label;
+
+- (IBAction)checkMoreImage_btn:(UIButton *)sender;
+
+@property (nonatomic, strong)BussessDetailModel *dataModel;
+@property (weak, nonatomic) IBOutlet UILabel *checkMoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end

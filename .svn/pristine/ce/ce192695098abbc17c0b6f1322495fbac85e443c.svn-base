@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyQrCodeView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5S7-PW-BQK">
+                    <rect key="frame" x="50" y="104" width="220" height="271"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫二维码进行线上支付" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfg-pG-qok">
+                            <rect key="frame" x="45" y="14" width="130" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.62352941179999999" green="0.66666666669999997" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipM-lz-TYF">
+                            <rect key="frame" x="180" y="4.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Hn0-rh-Dwl"/>
+                                <constraint firstAttribute="width" constant="35" id="rlv-Xc-InY"/>
+                            </constraints>
+                            <state key="normal" image="delet"/>
+                            <connections>
+                                <action selector="deletBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="1Da-zn-tGK"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INk-fJ-Wzp">
+                            <rect key="frame" x="0.0" y="44" width="220" height="1"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="KJG-iX-1rD"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUu-Ec-D77">
+                            <rect key="frame" x="0.0" y="45" width="220" height="226"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VnC-KI-Ev7">
+                                    <rect key="frame" x="22" y="24.5" width="176" height="176"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="VnC-KI-Ev7" secondAttribute="height" multiplier="1:1" id="Gm6-Jt-gdi"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="VnC-KI-Ev7" firstAttribute="width" secondItem="TUu-Ec-D77" secondAttribute="width" multiplier="4/5" id="KNT-TB-UCj"/>
+                                <constraint firstItem="VnC-KI-Ev7" firstAttribute="centerY" secondItem="TUu-Ec-D77" secondAttribute="centerY" id="NTm-Mw-oTT"/>
+                                <constraint firstItem="VnC-KI-Ev7" firstAttribute="centerX" secondItem="TUu-Ec-D77" secondAttribute="centerX" id="bYf-Zv-G4L"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="TUu-Ec-D77" secondAttribute="bottom" id="0Br-Lf-gKP"/>
+                        <constraint firstAttribute="width" secondItem="5S7-PW-BQK" secondAttribute="height" multiplier="3:3.7" id="2Kr-FL-vBY"/>
+                        <constraint firstItem="TUu-Ec-D77" firstAttribute="leading" secondItem="5S7-PW-BQK" secondAttribute="leading" id="CQR-7I-fbH"/>
+                        <constraint firstItem="sfg-pG-qok" firstAttribute="top" secondItem="5S7-PW-BQK" secondAttribute="top" constant="14" id="D6h-kY-wOi"/>
+                        <constraint firstAttribute="trailing" secondItem="INk-fJ-Wzp" secondAttribute="trailing" id="Mgv-Vg-pFP"/>
+                        <constraint firstAttribute="trailing" secondItem="ipM-lz-TYF" secondAttribute="trailing" constant="5" id="UHz-WX-uWt"/>
+                        <constraint firstAttribute="trailing" secondItem="TUu-Ec-D77" secondAttribute="trailing" id="Xjy-Qt-RJA"/>
+                        <constraint firstItem="INk-fJ-Wzp" firstAttribute="top" secondItem="sfg-pG-qok" secondAttribute="bottom" constant="14" id="e04-DC-QQP"/>
+                        <constraint firstItem="INk-fJ-Wzp" firstAttribute="leading" secondItem="5S7-PW-BQK" secondAttribute="leading" id="fcH-i6-zaB"/>
+                        <constraint firstItem="sfg-pG-qok" firstAttribute="centerX" secondItem="5S7-PW-BQK" secondAttribute="centerX" id="mrp-vG-FqR"/>
+                        <constraint firstItem="ipM-lz-TYF" firstAttribute="centerY" secondItem="sfg-pG-qok" secondAttribute="centerY" id="pHg-9V-ioo"/>
+                        <constraint firstItem="TUu-Ec-D77" firstAttribute="top" secondItem="INk-fJ-Wzp" secondAttribute="bottom" id="tqu-r1-Xem"/>
+                    </constraints>
+                </view>
+                <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUC-Rx-57S">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5S7-PW-BQK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GMX-dY-FDn"/>
+                <constraint firstAttribute="bottom" secondItem="LUC-Rx-57S" secondAttribute="bottom" id="Kbp-ca-IHN"/>
+                <constraint firstItem="5S7-PW-BQK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="Nej-aX-o3h"/>
+                <constraint firstItem="LUC-Rx-57S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SWp-25-ETF"/>
+                <constraint firstAttribute="trailing" secondItem="5S7-PW-BQK" secondAttribute="trailing" constant="50" id="SZw-bv-hDl"/>
+                <constraint firstItem="LUC-Rx-57S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oA8-l6-XSw"/>
+                <constraint firstAttribute="trailing" secondItem="LUC-Rx-57S" secondAttribute="trailing" id="tBI-U8-Hjv"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backView" destination="LUC-Rx-57S" id="zvz-bY-jF3"/>
+                <outlet property="itmeView" destination="5S7-PW-BQK" id="6TN-fZ-kjg"/>
+                <outlet property="qrCodeImage" destination="VnC-KI-Ev7" id="wCe-UJ-zpq"/>
+            </connections>
+            <point key="canvasLocation" x="294" y="195"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delet" width="44" height="44"/>
+    </resources>
+</document>

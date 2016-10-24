@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WithDrawalResultView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UML-Ua-YFh">
+                    <rect key="frame" x="40" y="100" width="520" height="400"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ns6-GG-scA">
+                            <rect key="frame" x="210" y="39" width="100" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Dik-Nb-bQQ"/>
+                                <constraint firstAttribute="width" constant="100" id="u4E-iZ-TSc"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sX9-nj-C7x">
+                            <rect key="frame" x="0.0" y="238" width="520" height="132"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJc-yB-2In">
+                                    <rect key="frame" x="0.0" y="0.0" width="520" height="132"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="确     定" backgroundImage="btn_1_nor">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="sureBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="faR-b3-nNT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="sX9-nj-C7x" secondAttribute="height" multiplier="927/235" id="COM-h2-BXV"/>
+                                <constraint firstItem="gJc-yB-2In" firstAttribute="top" secondItem="sX9-nj-C7x" secondAttribute="top" id="CZ6-vw-t2g"/>
+                                <constraint firstAttribute="bottom" secondItem="gJc-yB-2In" secondAttribute="bottom" id="Rjn-Wc-JK3"/>
+                                <constraint firstAttribute="trailing" secondItem="gJc-yB-2In" secondAttribute="trailing" id="aSn-el-l9g"/>
+                                <constraint firstItem="gJc-yB-2In" firstAttribute="leading" secondItem="sX9-nj-C7x" secondAttribute="leading" id="zKj-mS-KJ2"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提现申请成功 我们将于3个工作日内处理" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jia-Cy-H1s">
+                            <rect key="frame" x="50" y="160" width="420" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="sX9-nj-C7x" firstAttribute="leading" secondItem="UML-Ua-YFh" secondAttribute="leading" id="1Fb-bo-oWO"/>
+                        <constraint firstItem="ns6-GG-scA" firstAttribute="top" secondItem="UML-Ua-YFh" secondAttribute="top" constant="39" id="1Xg-hC-KUn"/>
+                        <constraint firstItem="Jia-Cy-H1s" firstAttribute="top" secondItem="ns6-GG-scA" secondAttribute="bottom" constant="21.5" id="2f6-Vp-jgr"/>
+                        <constraint firstAttribute="bottom" secondItem="sX9-nj-C7x" secondAttribute="bottom" constant="30" id="3LF-7H-2A3"/>
+                        <constraint firstAttribute="trailing" secondItem="Jia-Cy-H1s" secondAttribute="trailing" constant="50" id="5Nh-bK-Ccd"/>
+                        <constraint firstItem="Jia-Cy-H1s" firstAttribute="leading" secondItem="UML-Ua-YFh" secondAttribute="leading" constant="50" id="aOu-OV-pDj"/>
+                        <constraint firstAttribute="height" constant="400" id="f6w-1r-AH9"/>
+                        <constraint firstAttribute="trailing" secondItem="sX9-nj-C7x" secondAttribute="trailing" id="gnU-3z-EyH"/>
+                        <constraint firstItem="ns6-GG-scA" firstAttribute="centerX" secondItem="UML-Ua-YFh" secondAttribute="centerX" id="ucW-cO-Ubr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.93333333333333335" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="UML-Ua-YFh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3X3-T1-Cyb"/>
+                <constraint firstItem="UML-Ua-YFh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="eSw-fE-F6O"/>
+                <constraint firstAttribute="trailing" secondItem="UML-Ua-YFh" secondAttribute="trailing" constant="40" id="yXV-L7-9uE"/>
+            </constraints>
+            <connections>
+                <outlet property="alerLabel" destination="Jia-Cy-H1s" id="Zkl-BV-09v"/>
+                <outlet property="moView" destination="ns6-GG-scA" id="CBA-UZ-o1h"/>
+                <outlet property="sureView" destination="sX9-nj-C7x" id="DLH-Wj-f5b"/>
+            </connections>
+            <point key="canvasLocation" x="343" y="-143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_1_nor" width="309" height="81"/>
+    </resources>
+</document>
