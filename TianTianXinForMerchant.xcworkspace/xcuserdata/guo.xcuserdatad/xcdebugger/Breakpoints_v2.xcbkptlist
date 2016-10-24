@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TianTianXinForMerchant/AppDelegate.m"
-            timestampString = "495964231.449668"
+            filePath = "TianTianXinForMerchant/Mine/MineInfo/AboutUsViewController.m"
+            timestampString = "498972275.227622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-contactUs:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1,5 +1,5 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6d25ec79-ca60-9842-87a5-993906681732++8936",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8A0CC8AB9995727F73E0521C77F92008208F0D04",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "6d25ec79-ca60-9842-87a5-993906681732++8936" : {
 
@@ -9,13 +9,15 @@
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6d25ec79-ca60-9842-87a5-993906681732++9362" : 0,
     "6d25ec79-ca60-9842-87a5-993906681732++8936" : 0,
-    "6d25ec79-ca60-9842-87a5-993906681732++9362" : 0
+    "8A0CC8AB9995727F73E0521C77F92008208F0D04" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A8B2DB44-F1EA-422A-8999-FEFD07AC4C42",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6d25ec79-ca60-9842-87a5-993906681732++9362" : "%E5%A4%A9%E6%B7%BB%E8%96%AAios%EF%BC%88%E5%95%86%E5%AE%B6%E7%89%88%EF%BC%89\/",
     "6d25ec79-ca60-9842-87a5-993906681732++8936" : "ttx_ios_%E5%95%86%E5%AE%B6\/",
-    "6d25ec79-ca60-9842-87a5-993906681732++9362" : "%E5%A4%A9%E6%B7%BB%E8%96%AAios%EF%BC%88%E5%95%86%E5%AE%B6%E7%89%88%EF%BC%89\/"
+    "8A0CC8AB9995727F73E0521C77F92008208F0D04" : "TTXForMerchant\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "TianTianXinForMerchant",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -30,6 +32,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.250\/svn\/fxpf",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6d25ec79-ca60-9842-87a5-993906681732++9362"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GuoJianguang\/TTXForMerchant.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8A0CC8AB9995727F73E0521C77F92008208F0D04"
     }
   ]
 }
