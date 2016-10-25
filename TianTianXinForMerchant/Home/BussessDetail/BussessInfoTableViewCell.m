@@ -7,7 +7,7 @@
 //
 
 #import "BussessInfoTableViewCell.h"
-#import "BussessMapViewController.h"
+//#import "BussessMapViewController.h"
 #import "LocationManager.h"
 #import "SureAddressView.h"
 
@@ -82,18 +82,18 @@
 }
 
 - (IBAction)check_address_btn:(UIButton *)sender {
-    BussessMapViewController *mapVC = [[BussessMapViewController alloc]init];
-    CLLocationCoordinate2D d;
-    d.latitude = [self.dataModel.latitude floatValue];
-    d.longitude = [self.dataModel.longitude floatValue];
-    
-    if (d.longitude == 0 || d.latitude == 0) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"该商户暂时没有位置信息" duration:1.5];
-        return;
-    }
-    mapVC.stopcoordinate = d;
-    mapVC.dataModel = self.dataModel;
-    [self.viewController.navigationController pushViewController:mapVC animated:YES];
+//    BussessMapViewController *mapVC = [[BussessMapViewController alloc]init];
+//    CLLocationCoordinate2D d;
+//    d.latitude = [self.dataModel.latitude floatValue];
+//    d.longitude = [self.dataModel.longitude floatValue];
+//    
+//    if (d.longitude == 0 || d.latitude == 0) {
+//        [[JAlertViewHelper shareAlterHelper]showTint:@"该商户暂时没有位置信息" duration:1.5];
+//        return;
+//    }
+//    mapVC.stopcoordinate = d;
+//    mapVC.dataModel = self.dataModel;
+//    [self.viewController.navigationController pushViewController:mapVC animated:YES];
 }
 
 

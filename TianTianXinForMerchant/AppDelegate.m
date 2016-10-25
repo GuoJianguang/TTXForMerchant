@@ -13,10 +13,11 @@
 //#import "UMSocialQQHandler.h"
 #import "UMessage.h"
 #import "ZWIntroductionViewController.h"
-#import <AMapLocationKit/AMapLocationKit.h>
-#import <AMapSearchKit/AMapSearchKit.h>
+//#import <AMapSearchKit/AMapSearchKit.h>
 #import "WXApi.h"
 #import "WeXinPayObject.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 
 
 #define UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
@@ -84,9 +85,9 @@
 - (void)SetTheThirdParty:(NSDictionary*)launchOptions{
     
     //高德地图
-    [MAMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
-    [AMapLocationServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
-    [AMapSearchServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
+//    [MAMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
+    [AMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
+//    [AMapSearchServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
     //友盟分享的key
     [UMSocialData setAppKey:YoumengKey];
     //set AppKey and LaunchOptions

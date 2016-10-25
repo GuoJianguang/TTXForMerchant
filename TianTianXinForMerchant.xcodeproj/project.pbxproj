@@ -25,17 +25,12 @@
 		2D7C01DF1C7445BD00BE823C /* TianTianXinForMerchantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C01DE1C7445BD00BE823C /* TianTianXinForMerchantTests.m */; };
 		2D7C01EA1C7445BD00BE823C /* TianTianXinForMerchantUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C01E91C7445BD00BE823C /* TianTianXinForMerchantUITests.m */; };
 		2D7C01F81C74479200BE823C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C01F71C74479200BE823C /* Home.storyboard */; };
-		2D7C03131C744B1F00BE823C /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7C01FA1C744B1F00BE823C /* AMapLocationKit.framework */; };
 		2D7C03141C744B1F00BE823C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C01FC1C744B1F00BE823C /* .gitignore */; };
 		2D7C03151C744B1F00BE823C /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C01FD1C744B1F00BE823C /* bank.plist */; };
 		2D7C03161C744B1F00BE823C /* BankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C01FF1C744B1F00BE823C /* BankModel.m */; };
 		2D7C03171C744B1F00BE823C /* BankShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C02011C744B1F00BE823C /* BankShareManager.m */; };
 		2D7C03181C744B1F00BE823C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C02021C744B1F00BE823C /* README.md */; };
 		2D7C03191C744B1F00BE823C /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C02051C744B1F00BE823C /* Colours.m */; };
-		2D7C031A1C744B1F00BE823C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C02071C744B1F00BE823C /* AMap.bundle */; };
-		2D7C031B1C744B1F00BE823C /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7C02081C744B1F00BE823C /* AMapLocationKit.framework */; };
-		2D7C031C1C744B1F00BE823C /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7C02091C744B1F00BE823C /* AMapSearchKit.framework */; };
-		2D7C031D1C744B1F00BE823C /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7C020A1C744B1F00BE823C /* MAMapKit.framework */; };
 		2D7C031E1C744B1F00BE823C /* GGBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C020D1C744B1F00BE823C /* GGBannerCollectionViewCell.m */; };
 		2D7C031F1C744B1F00BE823C /* GGBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C020F1C744B1F00BE823C /* GGBannerView.m */; };
 		2D7C03201C744B1F00BE823C /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C02131C744B1F00BE823C /* IQNSArray+Sort.m */; };
@@ -209,17 +204,11 @@
 		2D7C045E1C746B8C00BE823C /* BussessinfoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C04381C746B8C00BE823C /* BussessinfoDetailTableViewCell.xib */; };
 		2D7C045F1C746B8C00BE823C /* BussessInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C043A1C746B8C00BE823C /* BussessInfoTableViewCell.m */; };
 		2D7C04601C746B8C00BE823C /* BussessInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C043B1C746B8C00BE823C /* BussessInfoTableViewCell.xib */; };
-		2D7C04611C746B8C00BE823C /* BussessMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C043D1C746B8C00BE823C /* BussessMapViewController.m */; };
-		2D7C04621C746B8C00BE823C /* BussessMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C043E1C746B8C00BE823C /* BussessMapViewController.xib */; };
 		2D7C04631C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04401C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m */; };
 		2D7C04641C746B8C00BE823C /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04421C746B8C00BE823C /* LineDashPolyline.m */; };
-		2D7C04651C746B8C00BE823C /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04441C746B8C00BE823C /* MANaviAnnotation.m */; };
-		2D7C04661C746B8C00BE823C /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04461C746B8C00BE823C /* MANaviPolyline.m */; };
-		2D7C04671C746B8C00BE823C /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04481C746B8C00BE823C /* MANaviRoute.m */; };
 		2D7C04681C746B8C00BE823C /* Map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C04491C746B8C00BE823C /* Map.xcassets */; };
 		2D7C04691C746B8C00BE823C /* ShowBussessImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C044B1C746B8C00BE823C /* ShowBussessImageViewController.m */; };
 		2D7C046A1C746B8C00BE823C /* ShowBussessImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C044C1C746B8C00BE823C /* ShowBussessImageViewController.xib */; };
-		2D7C046B1C746B8C00BE823C /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C044F1C746B8C00BE823C /* CommonUtility.m */; };
 		2D7C046C1C746B8C00BE823C /* Watch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04511C746B8C00BE823C /* Watch.m */; };
 		2D7C04731C75584100BE823C /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04711C75584100BE823C /* MineViewController.m */; };
 		2D7C04761C755C9C00BE823C /* mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C04751C755C9C00BE823C /* mine.xcassets */; };
@@ -335,6 +324,9 @@
 		BC7F52F71D73F5F600C87DA9 /* TencentOpenAPI in Resources */ = {isa = PBXBuildFile; fileRef = BC7F52F61D73F5F600C87DA9 /* TencentOpenAPI */; };
 		BCB06D861D7424EA0035A369 /* JiesuanPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB06D841D7424EA0035A369 /* JiesuanPayViewController.m */; };
 		BCB06D871D7424EA0035A369 /* JiesuanPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB06D851D7424EA0035A369 /* JiesuanPayViewController.xib */; };
+		BCCFFEB01DBF862D00034D85 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFFEAD1DBF862D00034D85 /* AMapFoundationKit.framework */; };
+		BCCFFEB11DBF862D00034D85 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFFEAE1DBF862D00034D85 /* AMapLocationKit.framework */; };
+		BCCFFEB21DBF862D00034D85 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFFEAF1DBF862D00034D85 /* MAMapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -385,7 +377,6 @@
 		2D7C01E91C7445BD00BE823C /* TianTianXinForMerchantUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TianTianXinForMerchantUITests.m; sourceTree = "<group>"; };
 		2D7C01EB1C7445BD00BE823C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7C01F71C74479200BE823C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		2D7C01FA1C744B1F00BE823C /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		2D7C01FC1C744B1F00BE823C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2D7C01FD1C744B1F00BE823C /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
 		2D7C01FE1C744B1F00BE823C /* BankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankModel.h; sourceTree = "<group>"; };
@@ -395,10 +386,6 @@
 		2D7C02021C744B1F00BE823C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2D7C02041C744B1F00BE823C /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		2D7C02051C744B1F00BE823C /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
-		2D7C02071C744B1F00BE823C /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
-		2D7C02081C744B1F00BE823C /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
-		2D7C02091C744B1F00BE823C /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
-		2D7C020A1C744B1F00BE823C /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		2D7C020C1C744B1F00BE823C /* GGBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBannerCollectionViewCell.h; sourceTree = "<group>"; };
 		2D7C020D1C744B1F00BE823C /* GGBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBannerCollectionViewCell.m; sourceTree = "<group>"; };
 		2D7C020E1C744B1F00BE823C /* GGBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBannerView.h; sourceTree = "<group>"; };
@@ -727,25 +714,14 @@
 		2D7C04391C746B8C00BE823C /* BussessInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BussessInfoTableViewCell.h; sourceTree = "<group>"; };
 		2D7C043A1C746B8C00BE823C /* BussessInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BussessInfoTableViewCell.m; sourceTree = "<group>"; };
 		2D7C043B1C746B8C00BE823C /* BussessInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BussessInfoTableViewCell.xib; sourceTree = "<group>"; };
-		2D7C043C1C746B8C00BE823C /* BussessMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BussessMapViewController.h; sourceTree = "<group>"; };
-		2D7C043D1C746B8C00BE823C /* BussessMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BussessMapViewController.m; sourceTree = "<group>"; };
-		2D7C043E1C746B8C00BE823C /* BussessMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BussessMapViewController.xib; sourceTree = "<group>"; };
 		2D7C043F1C746B8C00BE823C /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
 		2D7C04401C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
 		2D7C04411C746B8C00BE823C /* LineDashPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDashPolyline.h; sourceTree = "<group>"; };
 		2D7C04421C746B8C00BE823C /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
-		2D7C04431C746B8C00BE823C /* MANaviAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviAnnotation.h; sourceTree = "<group>"; };
-		2D7C04441C746B8C00BE823C /* MANaviAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviAnnotation.m; sourceTree = "<group>"; };
-		2D7C04451C746B8C00BE823C /* MANaviPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviPolyline.h; sourceTree = "<group>"; };
-		2D7C04461C746B8C00BE823C /* MANaviPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviPolyline.m; sourceTree = "<group>"; };
-		2D7C04471C746B8C00BE823C /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
-		2D7C04481C746B8C00BE823C /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
 		2D7C04491C746B8C00BE823C /* Map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Map.xcassets; sourceTree = "<group>"; };
 		2D7C044A1C746B8C00BE823C /* ShowBussessImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBussessImageViewController.h; sourceTree = "<group>"; };
 		2D7C044B1C746B8C00BE823C /* ShowBussessImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBussessImageViewController.m; sourceTree = "<group>"; };
 		2D7C044C1C746B8C00BE823C /* ShowBussessImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowBussessImageViewController.xib; sourceTree = "<group>"; };
-		2D7C044E1C746B8C00BE823C /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
-		2D7C044F1C746B8C00BE823C /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
 		2D7C04501C746B8C00BE823C /* Watch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Watch.h; sourceTree = "<group>"; };
 		2D7C04511C746B8C00BE823C /* Watch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Watch.m; sourceTree = "<group>"; };
 		2D7C04701C75584100BE823C /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
@@ -927,6 +903,9 @@
 		BCB06D841D7424EA0035A369 /* JiesuanPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiesuanPayViewController.m; sourceTree = "<group>"; };
 		BCB06D851D7424EA0035A369 /* JiesuanPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiesuanPayViewController.xib; sourceTree = "<group>"; };
 		BCBAA68D1D8FD3500090CDE6 /* TianTianXinForMerchant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TianTianXinForMerchant.entitlements; sourceTree = "<group>"; };
+		BCCFFEAD1DBF862D00034D85 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		BCCFFEAE1DBF862D00034D85 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
+		BCCFFEAF1DBF862D00034D85 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		BCED22D01FC533ADA4A59C74 /* Pods-TianTianXinForMerchant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTianXinForMerchant.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianTianXinForMerchant/Pods-TianTianXinForMerchant.release.xcconfig"; sourceTree = "<group>"; };
 		EEB49C9BA2C8F5F2AE8B2D94 /* Pods-TianTianXinForMerchant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTianXinForMerchant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianTianXinForMerchant/Pods-TianTianXinForMerchant.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -942,13 +921,12 @@
 				2D7C04011C74520F00BE823C /* libsqlite3.tbd in Frameworks */,
 				2D7C03521C744B1F00BE823C /* libUMSocial_Sdk_4.4.a in Frameworks */,
 				2D7C03501C744B1F00BE823C /* libUMessage_Sdk_1.2.3.a in Frameworks */,
-				2D7C031C1C744B1F00BE823C /* AMapSearchKit.framework in Frameworks */,
-				2D7C031B1C744B1F00BE823C /* AMapLocationKit.framework in Frameworks */,
+				BCCFFEB21DBF862D00034D85 /* MAMapKit.framework in Frameworks */,
 				2D7C035D1C744B1F00BE823C /* libWeChatSDK.a in Frameworks */,
 				2D7C035C1C744B1F00BE823C /* libSocialWechat.a in Frameworks */,
-				2D7C03131C744B1F00BE823C /* AMapLocationKit.framework in Frameworks */,
-				2D7C031D1C744B1F00BE823C /* MAMapKit.framework in Frameworks */,
+				BCCFFEB11DBF862D00034D85 /* AMapLocationKit.framework in Frameworks */,
 				919D60BA46BDFFC2E01B6B49 /* libPods-TianTianXinForMerchant.a in Frameworks */,
+				BCCFFEB01DBF862D00034D85 /* AMapFoundationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,7 +1029,6 @@
 			isa = PBXGroup;
 			children = (
 				2DF5419E1C85617D007CF7DF /* LBXScan */,
-				2D7C01FA1C744B1F00BE823C /* AMapLocationKit.framework */,
 				2D7C01FB1C744B1F00BE823C /* bank-master */,
 				2D7C02031C744B1F00BE823C /* Colours */,
 				2D7C02061C744B1F00BE823C /* GDMap */,
@@ -1098,10 +1075,9 @@
 		2D7C02061C744B1F00BE823C /* GDMap */ = {
 			isa = PBXGroup;
 			children = (
-				2D7C02071C744B1F00BE823C /* AMap.bundle */,
-				2D7C02081C744B1F00BE823C /* AMapLocationKit.framework */,
-				2D7C02091C744B1F00BE823C /* AMapSearchKit.framework */,
-				2D7C020A1C744B1F00BE823C /* MAMapKit.framework */,
+				BCCFFEAD1DBF862D00034D85 /* AMapFoundationKit.framework */,
+				BCCFFEAE1DBF862D00034D85 /* AMapLocationKit.framework */,
+				BCCFFEAF1DBF862D00034D85 /* MAMapKit.framework */,
 			);
 			path = GDMap;
 			sourceTree = "<group>";
@@ -1833,37 +1809,18 @@
 				2D0C829A1D53448C00E9237E /* CommentReplayViewController.xib */,
 				2D7C04311C746B8C00BE823C /* BussessDetailModel.h */,
 				2D7C04321C746B8C00BE823C /* BussessDetailModel.m */,
-				2D7C043C1C746B8C00BE823C /* BussessMapViewController.h */,
-				2D7C043D1C746B8C00BE823C /* BussessMapViewController.m */,
-				2D7C043E1C746B8C00BE823C /* BussessMapViewController.xib */,
 				2D7C043F1C746B8C00BE823C /* CHTCollectionViewWaterfallCell.h */,
 				2D7C04401C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m */,
 				2D7C04411C746B8C00BE823C /* LineDashPolyline.h */,
 				2D7C04421C746B8C00BE823C /* LineDashPolyline.m */,
-				2D7C04431C746B8C00BE823C /* MANaviAnnotation.h */,
-				2D7C04441C746B8C00BE823C /* MANaviAnnotation.m */,
-				2D7C04451C746B8C00BE823C /* MANaviPolyline.h */,
-				2D7C04461C746B8C00BE823C /* MANaviPolyline.m */,
-				2D7C04471C746B8C00BE823C /* MANaviRoute.h */,
-				2D7C04481C746B8C00BE823C /* MANaviRoute.m */,
 				2D7C04491C746B8C00BE823C /* Map.xcassets */,
 				2D7C044A1C746B8C00BE823C /* ShowBussessImageViewController.h */,
 				2D7C044B1C746B8C00BE823C /* ShowBussessImageViewController.m */,
 				2D7C044C1C746B8C00BE823C /* ShowBussessImageViewController.xib */,
-				2D7C044D1C746B8C00BE823C /* Utility */,
 				2D7C04501C746B8C00BE823C /* Watch.h */,
 				2D7C04511C746B8C00BE823C /* Watch.m */,
 			);
 			path = BussessDetail;
-			sourceTree = "<group>";
-		};
-		2D7C044D1C746B8C00BE823C /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				2D7C044E1C746B8C00BE823C /* CommonUtility.h */,
-				2D7C044F1C746B8C00BE823C /* CommonUtility.m */,
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		2D7C046F1C75582B00BE823C /* Mine */ = {
@@ -2275,7 +2232,6 @@
 				2DE532CD1C7AB28F00709E42 /* Default.png in Resources */,
 				2D7C041F1C74633200BE823C /* InformationBannerTableViewCell.xib in Resources */,
 				2DEB24691C7EE9A0006F20AF /* StoreJiesuanViewController.xib in Resources */,
-				2D7C031A1C744B1F00BE823C /* AMap.bundle in Resources */,
 				2DEB24641C7EE3E7006F20AF /* OrderEntryViewController.xib in Resources */,
 				2D7C03141C744B1F00BE823C /* .gitignore in Resources */,
 				2D7C036F1C744B1F00BE823C /* shanguangdeng@2x.png in Resources */,
@@ -2324,7 +2280,6 @@
 				2DE532E91C7AE9BF00709E42 /* MyMessageTableViewCell.xib in Resources */,
 				2D7C03581C744B1F00BE823C /* UMSLoginViewController.xib in Resources */,
 				2DF5419D1C852D9B007CF7DF /* AboutUsViewController.xib in Resources */,
-				2D7C04621C746B8C00BE823C /* BussessMapViewController.xib in Resources */,
 				2D11D4DA1C8D26C7009C57CE /* OrderEntryTableViewCell.xib in Resources */,
 				2DE532F61C7AEED600709E42 /* guide_image4.png in Resources */,
 				2D7C03711C744B1F00BE823C /* shanguangdeng2@2x.png in Resources */,
@@ -2458,7 +2413,6 @@
 				2D7C03801C744B1F00BE823C /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				2D7C03411C744B1F00BE823C /* SDWebImageDecoder.m in Sources */,
 				2D7C03E01C744E3D00BE823C /* NothingView.m in Sources */,
-				2D7C04651C746B8C00BE823C /* MANaviAnnotation.m in Sources */,
 				2D7C03781C744B1F00BE823C /* ZLAnimationScrollView.m in Sources */,
 				2D7C03441C744B1F00BE823C /* SDWebImageManager.m in Sources */,
 				2D7C032A1C744B1F00BE823C /* IQTitleBarButtonItem.m in Sources */,
@@ -2517,7 +2471,6 @@
 				2D7C03891C744B1F00BE823C /* ZLPhotoPickerCollectionView.m in Sources */,
 				2D7C03FB1C7450D300BE823C /* UIView+Extension.m in Sources */,
 				2D7C035F1C744B1F00BE823C /* MoView.m in Sources */,
-				2D7C04661C746B8C00BE823C /* MANaviPolyline.m in Sources */,
 				2D7C03761C744B1F00BE823C /* ZLAnimationBaseView.m in Sources */,
 				2DE532E61C7AE9BF00709E42 /* MyMessageListViewController.m in Sources */,
 				2DEB245B1C7ECBED006F20AF /* TimeTableViewCell.m in Sources */,
@@ -2574,7 +2527,6 @@
 				2D7C04691C746B8C00BE823C /* ShowBussessImageViewController.m in Sources */,
 				2D7C04521C746B8C00BE823C /* BussessAllCommentViewController.m in Sources */,
 				2D7C03181C744B1F00BE823C /* README.md in Sources */,
-				2D7C04671C746B8C00BE823C /* MANaviRoute.m in Sources */,
 				2DAE6DC01D3DCC8600FB1EC0 /* PayQrCodeViewController.m in Sources */,
 				2DA25E611CFC3C1B003CFCE9 /* ForgetPassowrdTableViewCell.m in Sources */,
 				2D7C03391C744B1F00BE823C /* View+MASAdditions.m in Sources */,
@@ -2597,7 +2549,6 @@
 				2D7C04581C746B8C00BE823C /* BussessCommentTableViewCell.m in Sources */,
 				2D7C03F81C744F9A00BE823C /* RegisterViewController.m in Sources */,
 				2DEE49831C7C48A700E2A3A7 /* AssociatedTableViewDataSouce.m in Sources */,
-				2D7C046B1C746B8C00BE823C /* CommonUtility.m in Sources */,
 				2D7C03331C744B1F00BE823C /* MASConstraintMaker.m in Sources */,
 				2D7C03301C744B1F00BE823C /* README.mdown in Sources */,
 				2D7C034B1C744B1F00BE823C /* UIImageView+WebCache.m in Sources */,
@@ -2618,7 +2569,6 @@
 				2D7C03671C744B1F00BE823C /* ZBWaterView.mm in Sources */,
 				2D7C03771C744B1F00BE823C /* ZLAnimationImageView.m in Sources */,
 				2D7C04221C74633200BE823C /* InformationDetailViewController.m in Sources */,
-				2D7C04611C746B8C00BE823C /* BussessMapViewController.m in Sources */,
 				2D7C03DD1C744E3D00BE823C /* HttpClientAlertViewHelper.m in Sources */,
 				2DC6427A1D406EEF0099B0B1 /* SureAddressView.m in Sources */,
 				2D7C033E1C744B1F00BE823C /* NSData+ImageContentType.m in Sources */,
