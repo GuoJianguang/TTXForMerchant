@@ -2814,6 +2814,7 @@
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/UMSocial_Sdk_4.4",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/Wechat",
+					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttx.TianTianXinForMerchant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2846,6 +2847,7 @@
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/UMSocial_Sdk_4.4",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/Wechat",
+					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttx.TianTianXinForMerchant;
 				PRODUCT_NAME = "$(TARGET_NAME)";

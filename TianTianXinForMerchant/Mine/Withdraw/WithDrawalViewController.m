@@ -180,11 +180,10 @@
     }else if ([self.editMoneyTF.text integerValue]%10 !=0){
         [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额必须是10的整数倍" duration:1.];
         return;
+    }else if ([self.editMoneyTF.text integerValue] <1000){
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额不能少于1000元" duration:1.5];
+        return;
     }
-//    else if ([self.editMoneyTF.text integerValue] <1000){
-//        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额不能少于1000元" duration:1.5];
-//        return;
-//    }
     [HttpClient POST:@"mch/withdraw/sendVerifyCode" parameters:@{@"token":[TTXUserInfo shareUserInfos].token} success:^(AFHTTPRequestOperation *operation, id jsonObject) {
         if (IsRequestTrue) {
             [self.sendCodeBtn setTitle:@"重新获取(60)" forState:UIControlStateNormal];

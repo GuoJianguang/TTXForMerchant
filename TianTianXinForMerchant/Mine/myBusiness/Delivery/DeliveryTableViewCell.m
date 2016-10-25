@@ -41,7 +41,7 @@
     self.orderView.layer.cornerRadius = 5;
     self.orderView.backgroundColor = [UIColor whiteColor];
     self.orderView.layer.masksToBounds = YES;
-    self.orderImage.layer.cornerRadius = self.orderImage.bounds.size.width/2;
+    self.orderImage.layer.cornerRadius = (148-60)/2.;
     self.orderImage.layer.masksToBounds = YES;
     self.orderName.textColor = MacoTitleColor;
     self.orderDetail.textColor = MacoDetailColor;
