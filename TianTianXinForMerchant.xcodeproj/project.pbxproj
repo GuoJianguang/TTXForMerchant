@@ -317,6 +317,10 @@
 		2DF541D21C858C07007CF7DF /* MyAccountInDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF541D01C858C07007CF7DF /* MyAccountInDetailViewController.xib */; };
 		919D60BA46BDFFC2E01B6B49 /* libPods-TianTianXinForMerchant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B0C4ED5B5B886D766BBD02 /* libPods-TianTianXinForMerchant.a */; };
 		BC0A158F1D766C5E00F36100 /* WeXinPayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0A158E1D766C5E00F36100 /* WeXinPayObject.m */; };
+		BC3EB0911DCAE9D200D136F8 /* BaseHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3EB0891DCAE9D200D136F8 /* BaseHttpClient.m */; };
+		BC3EB0921DCAE9D200D136F8 /* HttpClient_Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC3EB08A1DCAE9D200D136F8 /* HttpClient_Readme.txt */; };
+		BC3EB0931DCAE9D200D136F8 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3EB08C1DCAE9D200D136F8 /* HttpClient.m */; };
+		BC3EB0941DCAE9D200D136F8 /* HttpClientAlertViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3EB08E1DCAE9D200D136F8 /* HttpClientAlertViewHelper.m */; };
 		BC7F52F71D73F5F600C87DA9 /* TencentOpenAPI in Resources */ = {isa = PBXBuildFile; fileRef = BC7F52F61D73F5F600C87DA9 /* TencentOpenAPI */; };
 		BCB06D861D7424EA0035A369 /* JiesuanPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB06D841D7424EA0035A369 /* JiesuanPayViewController.m */; };
 		BCB06D871D7424EA0035A369 /* JiesuanPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB06D851D7424EA0035A369 /* JiesuanPayViewController.xib */; };
@@ -885,6 +889,15 @@
 		90B0C4ED5B5B886D766BBD02 /* libPods-TianTianXinForMerchant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TianTianXinForMerchant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0A158D1D766C5E00F36100 /* WeXinPayObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeXinPayObject.h; sourceTree = "<group>"; };
 		BC0A158E1D766C5E00F36100 /* WeXinPayObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeXinPayObject.m; sourceTree = "<group>"; };
+		BC3EB0881DCAE9D200D136F8 /* BaseHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpClient.h; sourceTree = "<group>"; };
+		BC3EB0891DCAE9D200D136F8 /* BaseHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpClient.m; sourceTree = "<group>"; };
+		BC3EB08A1DCAE9D200D136F8 /* HttpClient_Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HttpClient_Readme.txt; sourceTree = "<group>"; };
+		BC3EB08B1DCAE9D200D136F8 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		BC3EB08C1DCAE9D200D136F8 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		BC3EB08D1DCAE9D200D136F8 /* HttpClientAlertViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClientAlertViewHelper.h; sourceTree = "<group>"; };
+		BC3EB08E1DCAE9D200D136F8 /* HttpClientAlertViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClientAlertViewHelper.m; sourceTree = "<group>"; };
+		BC3EB08F1DCAE9D200D136F8 /* HttpClientConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClientConstant.h; sourceTree = "<group>"; };
+		BC3EB0901DCAE9D200D136F8 /* NetworkRequestProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkRequestProtocal.h; sourceTree = "<group>"; };
 		BC7F52F61D73F5F600C87DA9 /* TencentOpenAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TencentOpenAPI; sourceTree = "<group>"; };
 		BCB06D831D7424EA0035A369 /* JiesuanPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiesuanPayViewController.h; sourceTree = "<group>"; };
 		BCB06D841D7424EA0035A369 /* JiesuanPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiesuanPayViewController.m; sourceTree = "<group>"; };
@@ -1688,6 +1701,15 @@
 		2D7C03B11C744E3D00BE823C /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
+				BC3EB0881DCAE9D200D136F8 /* BaseHttpClient.h */,
+				BC3EB0891DCAE9D200D136F8 /* BaseHttpClient.m */,
+				BC3EB08A1DCAE9D200D136F8 /* HttpClient_Readme.txt */,
+				BC3EB08B1DCAE9D200D136F8 /* HttpClient.h */,
+				BC3EB08C1DCAE9D200D136F8 /* HttpClient.m */,
+				BC3EB08D1DCAE9D200D136F8 /* HttpClientAlertViewHelper.h */,
+				BC3EB08E1DCAE9D200D136F8 /* HttpClientAlertViewHelper.m */,
+				BC3EB08F1DCAE9D200D136F8 /* HttpClientConstant.h */,
+				BC3EB0901DCAE9D200D136F8 /* NetworkRequestProtocal.h */,
 			);
 			path = HttpClient;
 			sourceTree = "<group>";
@@ -2258,6 +2280,7 @@
 				2D7C03581C744B1F00BE823C /* UMSLoginViewController.xib in Resources */,
 				2DF5419D1C852D9B007CF7DF /* AboutUsViewController.xib in Resources */,
 				2D11D4DA1C8D26C7009C57CE /* OrderEntryTableViewCell.xib in Resources */,
+				BC3EB0921DCAE9D200D136F8 /* HttpClient_Readme.txt in Resources */,
 				2DE532F61C7AEED600709E42 /* guide_image4.png in Resources */,
 				2D7C03711C744B1F00BE823C /* shanguangdeng2@2x.png in Resources */,
 				2D7C04551C746B8C00BE823C /* BussessBannerTableViewCell.xib in Resources */,
@@ -2431,6 +2454,7 @@
 				2DEB24561C7EB2AA006F20AF /* YetCompleteOrderViewController.m in Sources */,
 				2D7C033A1C744B1F00BE823C /* MarqueeLabel.m in Sources */,
 				2D7C03621C744B1F00BE823C /* SVProgressHUD.m in Sources */,
+				BC3EB0911DCAE9D200D136F8 /* BaseHttpClient.m in Sources */,
 				BCB06D861D7424EA0035A369 /* JiesuanPayViewController.m in Sources */,
 				2D7C03821C744B1F00BE823C /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				2D7C031F1C744B1F00BE823C /* GGBannerView.m in Sources */,
@@ -2521,6 +2545,7 @@
 				2D7C03D91C744E3D00BE823C /* HomeVerticalBtn.m in Sources */,
 				2D7C04631C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m in Sources */,
 				2DE532EA1C7AE9BF00709E42 /* MyMessageView.m in Sources */,
+				BC3EB0931DCAE9D200D136F8 /* HttpClient.m in Sources */,
 				2D7C03321C744B1F00BE823C /* MASConstraint.m in Sources */,
 				2D7C04581C746B8C00BE823C /* BussessCommentTableViewCell.m in Sources */,
 				2D7C03F81C744F9A00BE823C /* RegisterViewController.m in Sources */,
@@ -2554,6 +2579,7 @@
 				2D7C03F41C744F9A00BE823C /* ForgetPasswordViewController.m in Sources */,
 				2D7DA3A21C844287003E3CB9 /* EditPasswordViewController.m in Sources */,
 				2D7C03371C744B1F00BE823C /* NSArray+MASAdditions.m in Sources */,
+				BC3EB0941DCAE9D200D136F8 /* HttpClientAlertViewHelper.m in Sources */,
 				2DF541C91C856227007CF7DF /* UIActionSheet+LBXAlertAction.m in Sources */,
 				2D7C03281C744B1F00BE823C /* IQTextView.m in Sources */,
 				2D7C03E41C744E3D00BE823C /* UIImage+FrameSize.m in Sources */,
