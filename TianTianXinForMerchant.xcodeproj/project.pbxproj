@@ -153,10 +153,6 @@
 		2D7C03D71C744E3D00BE823C /* EBTFormatterTextFieldWithSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03AC1C744E3D00BE823C /* EBTFormatterTextFieldWithSpace.m */; };
 		2D7C03D81C744E3D00BE823C /* HomeImageSwitchIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03AE1C744E3D00BE823C /* HomeImageSwitchIndicatorView.m */; };
 		2D7C03D91C744E3D00BE823C /* HomeVerticalBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03B01C744E3D00BE823C /* HomeVerticalBtn.m */; };
-		2D7C03DA1C744E3D00BE823C /* BaseHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03B31C744E3D00BE823C /* BaseHttpClient.m */; };
-		2D7C03DB1C744E3D00BE823C /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03B51C744E3D00BE823C /* HttpClient.m */; };
-		2D7C03DC1C744E3D00BE823C /* HttpClient_Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C03B61C744E3D00BE823C /* HttpClient_Readme.txt */; };
-		2D7C03DD1C744E3D00BE823C /* HttpClientAlertViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03B81C744E3D00BE823C /* HttpClientAlertViewHelper.m */; };
 		2D7C03DE1C744E3D00BE823C /* ImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03BC1C744E3D00BE823C /* ImageViewer.m */; };
 		2D7C03DF1C744E3D00BE823C /* JAlertViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03BE1C744E3D00BE823C /* JAlertViewHelper.m */; };
 		2D7C03E01C744E3D00BE823C /* NothingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C03C01C744E3D00BE823C /* NothingView.m */; };
@@ -627,15 +623,6 @@
 		2D7C03AE1C744E3D00BE823C /* HomeImageSwitchIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeImageSwitchIndicatorView.m; sourceTree = "<group>"; };
 		2D7C03AF1C744E3D00BE823C /* HomeVerticalBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVerticalBtn.h; sourceTree = "<group>"; };
 		2D7C03B01C744E3D00BE823C /* HomeVerticalBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVerticalBtn.m; sourceTree = "<group>"; };
-		2D7C03B21C744E3D00BE823C /* BaseHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpClient.h; sourceTree = "<group>"; };
-		2D7C03B31C744E3D00BE823C /* BaseHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpClient.m; sourceTree = "<group>"; };
-		2D7C03B41C744E3D00BE823C /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
-		2D7C03B51C744E3D00BE823C /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
-		2D7C03B61C744E3D00BE823C /* HttpClient_Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HttpClient_Readme.txt; sourceTree = "<group>"; };
-		2D7C03B71C744E3D00BE823C /* HttpClientAlertViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClientAlertViewHelper.h; sourceTree = "<group>"; };
-		2D7C03B81C744E3D00BE823C /* HttpClientAlertViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClientAlertViewHelper.m; sourceTree = "<group>"; };
-		2D7C03B91C744E3D00BE823C /* HttpClientConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClientConstant.h; sourceTree = "<group>"; };
-		2D7C03BA1C744E3D00BE823C /* NetworkRequestProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkRequestProtocal.h; sourceTree = "<group>"; };
 		2D7C03BB1C744E3D00BE823C /* ImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewer.h; sourceTree = "<group>"; };
 		2D7C03BC1C744E3D00BE823C /* ImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewer.m; sourceTree = "<group>"; };
 		2D7C03BD1C744E3D00BE823C /* JAlertViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlertViewHelper.h; sourceTree = "<group>"; };
@@ -1701,15 +1688,6 @@
 		2D7C03B11C744E3D00BE823C /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
-				2D7C03B21C744E3D00BE823C /* BaseHttpClient.h */,
-				2D7C03B31C744E3D00BE823C /* BaseHttpClient.m */,
-				2D7C03B41C744E3D00BE823C /* HttpClient.h */,
-				2D7C03B51C744E3D00BE823C /* HttpClient.m */,
-				2D7C03B61C744E3D00BE823C /* HttpClient_Readme.txt */,
-				2D7C03B71C744E3D00BE823C /* HttpClientAlertViewHelper.h */,
-				2D7C03B81C744E3D00BE823C /* HttpClientAlertViewHelper.m */,
-				2D7C03B91C744E3D00BE823C /* HttpClientConstant.h */,
-				2D7C03BA1C744E3D00BE823C /* NetworkRequestProtocal.h */,
 			);
 			path = HttpClient;
 			sourceTree = "<group>";
@@ -2225,7 +2203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7C03DC1C744E3D00BE823C /* HttpClient_Readme.txt in Resources */,
 				2D7C03511C744B1F00BE823C /* UMSocialLocalizable.strings in Resources */,
 				2DE532D71C7AE10400709E42 /* MyBusinessView.xib in Resources */,
 				2D7C04591C746B8C00BE823C /* BussessCommentTableViewCell.xib in Resources */,
@@ -2538,7 +2515,6 @@
 				2D0887EB1CED6B0B001D992F /* AboutTableViewCell.m in Sources */,
 				2D7C03831C744B1F00BE823C /* ZLPhotoAssets.m in Sources */,
 				2D7C039E1C744E0B00BE823C /* BaseCollectionViewCell.m in Sources */,
-				2D7C03DB1C744E3D00BE823C /* HttpClient.m in Sources */,
 				2D7C040C1C7462AD00BE823C /* HomeViewController.m in Sources */,
 				2D7C03A31C744E0B00BE823C /* BaseViewController.m in Sources */,
 				2D7C01C61C7445BD00BE823C /* AppDelegate.m in Sources */,
@@ -2569,7 +2545,6 @@
 				2D7C03671C744B1F00BE823C /* ZBWaterView.mm in Sources */,
 				2D7C03771C744B1F00BE823C /* ZLAnimationImageView.m in Sources */,
 				2D7C04221C74633200BE823C /* InformationDetailViewController.m in Sources */,
-				2D7C03DD1C744E3D00BE823C /* HttpClientAlertViewHelper.m in Sources */,
 				2DC6427A1D406EEF0099B0B1 /* SureAddressView.m in Sources */,
 				2D7C033E1C744B1F00BE823C /* NSData+ImageContentType.m in Sources */,
 				2D7C038C1C744B1F00BE823C /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
@@ -2577,7 +2552,6 @@
 				2D7C03681C744B1F00BE823C /* DACircularProgressView.m in Sources */,
 				2D7C03A01C744E0B00BE823C /* BaseNavigationBar.m in Sources */,
 				2D7C03F41C744F9A00BE823C /* ForgetPasswordViewController.m in Sources */,
-				2D7C03DA1C744E3D00BE823C /* BaseHttpClient.m in Sources */,
 				2D7DA3A21C844287003E3CB9 /* EditPasswordViewController.m in Sources */,
 				2D7C03371C744B1F00BE823C /* NSArray+MASAdditions.m in Sources */,
 				2DF541C91C856227007CF7DF /* UIActionSheet+LBXAlertAction.m in Sources */,
