@@ -1,30 +1,24 @@
 PODS:
-  - AFNetworking (2.6.3):
-    - AFNetworking/NSURLConnection (= 2.6.3)
-    - AFNetworking/NSURLSession (= 2.6.3)
-    - AFNetworking/Reachability (= 2.6.3)
-    - AFNetworking/Security (= 2.6.3)
-    - AFNetworking/Serialization (= 2.6.3)
-    - AFNetworking/UIKit (= 2.6.3)
-  - AFNetworking/NSURLConnection (2.6.3):
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.3)
-  - AFNetworking/Security (2.6.3)
-  - AFNetworking/Serialization (2.6.3)
-  - AFNetworking/UIKit (2.6.3):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - HappyDNS (0.2.3)
+  - HappyDNS (0.3.10)
   - MJRefresh (3.0.7)
-  - Qiniu (7.0.16):
-    - AFNetworking (~> 2.0)
-    - HappyDNS (~> 0.2)
+  - Qiniu (7.1.1):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
   - UMengAnalytics-NO-IDFA (4.1.1)
   - ZXingObjC (3.1.0):
     - ZXingObjC/All (= 3.1.0)
@@ -32,18 +26,18 @@ PODS:
 
 DEPENDENCIES:
   - MJRefresh (~> 3.0.7)
-  - Qiniu (~> 7.0)
+  - Qiniu (~> 7.1.1)
   - UMengAnalytics-NO-IDFA
   - ZXingObjC (~> 3.1.0)
 
 SPEC CHECKSUMS:
-  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  HappyDNS: 6d85942e64c28b4fa61f8c76580398f52d6d1d11
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
-  Qiniu: 51a8702cddc02b50867e10cef99291b9a8a006b1
+  Qiniu: 5e5d7d759d22393bb4b87cdfacf8fab951260f3e
   UMengAnalytics-NO-IDFA: 1064992c1b7aaa22823179c0b33a664813fd7a85
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 274944d2de652931a2a9c2c9742e6030240bd27e
+PODFILE CHECKSUM: 786c55d197224778bee6ddffe99b6fe2860f27d0
 
 COCOAPODS: 1.1.0.beta.1
