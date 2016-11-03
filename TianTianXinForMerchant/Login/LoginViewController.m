@@ -80,7 +80,7 @@
                                 @"deviceToken":[TTXUserInfo shareUserInfos].devicetoken,
                                 @"deviceType":@"ios",
                                 @"password":password};
-        [HttpClient POST:@"mch/login" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"mch/login" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
                 //设置用户信息
@@ -109,7 +109,7 @@
                 }
             }
             
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             [SVProgressHUD dismiss];
         }];
     }

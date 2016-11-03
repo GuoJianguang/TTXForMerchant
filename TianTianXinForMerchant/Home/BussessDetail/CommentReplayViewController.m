@@ -50,14 +50,14 @@
                             @"token":[TTXUserInfo shareUserInfos].token,
                             @"replyContent":self.replayTF.text};
     [SVProgressHUD showWithStatus:@"正在提交请求..."];
-    [HttpClient POST:@"mch/comment/reply" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/comment/reply" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"replaySuccess" object:nil];
             [self.navigationController popViewControllerAnimated:YES];
         }
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [SVProgressHUD dismiss];
         
     }];

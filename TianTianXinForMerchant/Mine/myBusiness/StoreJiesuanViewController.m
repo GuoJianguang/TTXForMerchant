@@ -106,7 +106,7 @@
                             @"settleTime":timeStr,
                             @"pageNo":@(self.page),
                             @"pageSize":@(MacoPageSize)};
-    [HttpClient POST:@"mch/business/searchSettles" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/business/searchSettles" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             CGFloat totalAmount = [NullToNumber(jsonObject[@"data"][@"totalAmount"]) doubleValue];
             self.totalAmount.text =[NSString stringWithFormat:@"￥%.2f", totalAmount];
@@ -130,7 +130,7 @@
             
             [self.collectionView reloadData];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.collectionView.mj_header endRefreshing];
         }else{

@@ -145,7 +145,7 @@ static NSString *hasComplete  = @"hasComplete";//已完成
                                 @"deviceToken":[TTXUserInfo shareUserInfos].devicetoken,
                                 @"deviceType":@"ios",
                                 @"password":password};
-        [HttpClient POST:@"mch/login" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"mch/login" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             if (IsRequestTrue) {
                 //设置用户信息
                 [TTXUserInfo shareUserInfos].currentLogined = YES;
@@ -162,7 +162,7 @@ static NSString *hasComplete  = @"hasComplete";//已完成
              ];
             [[NSUserDefaults standardUserDefaults]synchronize];
             
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             
         }];
     }
@@ -183,7 +183,7 @@ static NSString *hasComplete  = @"hasComplete";//已完成
 {
 //    self.navigationController
     NSDictionary *parms = @{@"code":NullToSpace([TTXUserInfo shareUserInfos].code)};
-    [HttpClient GET:@"mch/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if ([jsonObject[@"data"][@"unreadMchMsgCountVo"] isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *unreadMsgCountVo = jsonObject[@"data"][@"unreadMchMsgCountVo"];
@@ -197,7 +197,7 @@ static NSString *hasComplete  = @"hasComplete";//已完成
             }
             [TTXUserInfo shareUserInfos].bindingFlag = NullToNumber(jsonObject[@"data"][@"bankAccountFlag"]);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
     

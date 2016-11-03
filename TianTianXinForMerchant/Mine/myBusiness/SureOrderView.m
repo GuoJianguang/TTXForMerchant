@@ -41,14 +41,14 @@
                              @"balanceAmount":NullToSpace(self.balancePay.text),
                              @"yesterdayFlag":@(self.isYestodayOder)};
     [SVProgressHUD showWithStatus:@"正在请求..." maskType:SVProgressHUDMaskTypeBlack];
-    [HttpClient POST:@"mch/business/consumeInput" parameters:pramrs success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/business/consumeInput" parameters:pramrs success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             if ([self.delegate respondsToSelector:@selector(sureSuccess)]) {
                 [self.delegate sureSuccess];
             }
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [SVProgressHUD dismiss];
     }];
 }

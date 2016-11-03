@@ -29,7 +29,7 @@ static WeXinPayObject *instance;
 + (void)startWexinPay:(NSDictionary *)parms
 {
     [SVProgressHUD showWithStatus:@"正在发送支付请求" maskType:SVProgressHUDMaskTypeBlack];
-    [HttpClient GET:@"pay/mch/settle/wxpay" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"pay/mch/settle/wxpay" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             NSDictionary *dict = jsonObject[@"data"];
@@ -43,7 +43,7 @@ static WeXinPayObject *instance;
             req.sign                = [dict objectForKey:@"sign"];
             [WXApi sendReq:req] ;
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [SVProgressHUD dismiss];
         [[JAlertViewHelper shareAlterHelper]showTint:@"订单生成失败,请稍后重试" duration:1.];
     }];

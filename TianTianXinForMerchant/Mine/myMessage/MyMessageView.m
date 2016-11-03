@@ -83,7 +83,7 @@ static NSInteger pangeCount = 20;
     NSDictionary *parms = @{@"pageNo":@(self.page),
                             @"pageSize":@(pangeCount),
                             @"token":[TTXUserInfo shareUserInfos].token};
-    [HttpClient GET:@"mch/message/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/message/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.datasouceArray removeAllObjects];
@@ -110,7 +110,7 @@ static NSInteger pangeCount = 20;
             [self.tableView.mj_footer endRefreshing];
         }
         [self.tableView showRereshBtnwithALerString:@"请刷新重试"];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.tableView.mj_header endRefreshing];
         }else{

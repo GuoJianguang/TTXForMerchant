@@ -94,7 +94,7 @@
                                 @"token":[TTXUserInfo shareUserInfos].token,
                                 @"newPassword":newPassword,
                                 @"verifyCode":self.verif_tf.text};
-        [HttpClient POST:@"mch/updatePassword" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"mch/updatePassword" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
                 //设置用户信息
@@ -102,7 +102,7 @@
                 [[NSUserDefaults standardUserDefaults]setObject:self.pasword_tf.text forKey:LoginUserPassword];
                 [self.navigationController popViewControllerAnimated:YES];
             }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             [SVProgressHUD dismiss];
         }];
     }
@@ -139,14 +139,14 @@
 - (IBAction)verifBtn:(UIButton *)sender {
     NSString *phone= [[NSUserDefaults standardUserDefaults]objectForKey:LoginUserName];
     NSDictionary *prams = @{@"phone":phone};
-    [HttpClient POST:@"sms/sendMchModifyPwdCode" parameters:prams success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"sms/sendMchModifyPwdCode" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
                 if (IsRequestTrue) {
                     [self.verifBtn setTitle:@"重新获取(60)" forState:UIControlStateNormal];
                     self.verifBtn.enabled = NO;
                     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeLeft:) userInfo:nil repeats:YES];
                     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
                 }
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(NSURLSessionDataTask *operation, NSError *error) {
                 
             }];
 }

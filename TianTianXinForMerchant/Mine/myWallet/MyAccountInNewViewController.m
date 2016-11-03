@@ -123,7 +123,7 @@
                             @"pageNo":@(self.mchPage),
                             @"pageSize":@(MacoPageSize)};
     
-    [HttpClient POST:@"mch/account/income" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/account/income" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.mchdataSouceArray removeAllObjects];
@@ -149,7 +149,7 @@
             [self.mchTableView.mj_footer endRefreshing];
         }
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.mchTableView.mj_header endRefreshing];
         }else{
@@ -167,7 +167,7 @@
                             @"pageNo":@(self.MerchantsPage),
                             @"pageSize":@(MacoPageSize)};
     
-    [HttpClient POST:@"mch/account/shopIncome" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/account/shopIncome" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.merchantsdataSouceArray removeAllObjects];
@@ -191,7 +191,7 @@
         }else{
             [self.merchantsTableView.mj_footer endRefreshing];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.merchantsTableView.mj_header endRefreshing];
         }else{

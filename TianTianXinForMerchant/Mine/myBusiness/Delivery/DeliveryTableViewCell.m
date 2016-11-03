@@ -87,7 +87,7 @@
 {
     self.logisticsTF.enabled = NO;
     self.logisticsTF.placeholder = @"暂时没有物流公司信息";
-    [HttpClient GET:@"mch/business/logisticsCompany" parameters:nil success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/business/logisticsCompany" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             NSArray *array = jsonObject[@"data"];
             NSMutableArray *datasoucearray = [NSMutableArray array];
@@ -106,7 +106,7 @@
             self.companyPicker.dataSouceArray = datasoucearray;
         }
 
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
     
@@ -167,13 +167,13 @@
                                 @"logisticsCompanyCode":NullToSpace(self.logisticsCompanyCode),
                                 @"logisticsNumber":NullToSpace(self.awbTF.text),
                                 @"logisticsCompany":NullToSpace(self.otherLNameTF.text)};
-        [HttpClient POST:@"mch/business/deliver" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"mch/business/deliver" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             if (IsRequestTrue) {
                 [[JAlertViewHelper shareAlterHelper]showTint:@"发货成功" duration:1.5];
                 [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshWaitFahuo" object:nil];
                 [self.viewController.navigationController popViewControllerAnimated:YES];
             }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             
         }];
     }else{
@@ -181,13 +181,13 @@
                                 @"orderId":self.dataModel.orderId,
                                 @"logisticsCompanyCode":@"",
                                 @"logisticsNumber":@""};
-        [HttpClient POST:@"mch/business/deliver" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"mch/business/deliver" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             if (IsRequestTrue) {
                 [[JAlertViewHelper shareAlterHelper]showTint:@"发货成功" duration:1.5];
                 [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshWaitFahuo" object:nil];
                 [self.viewController.navigationController popViewControllerAnimated:YES];
             }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             
         }];
     }

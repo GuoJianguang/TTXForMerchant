@@ -63,7 +63,7 @@
                             @"latitude":NullToNumber(@([TTXUserInfo shareUserInfos].locationCoordinate.latitude))
                             };
     [SVProgressHUD showWithStatus:@"上传中" maskType:SVProgressHUDMaskTypeBlack];
-    [HttpClient POST:@"mch/uploadLocation" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/uploadLocation" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             [SVProgressHUD showSuccessWithStatus:@"上传成功"];
             [TTXUserInfo shareUserInfos].locationUploadFlag = YES;
@@ -71,7 +71,7 @@
             [self removeFromSuperview];
         }
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [SVProgressHUD dismiss];
         [SVProgressHUD showErrorWithStatus:@"上传失败，请重试"];
     }];

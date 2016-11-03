@@ -155,7 +155,7 @@
                                 @"bankAccountPro":self.provincesTF.text,
                                 @"token":[TTXUserInfo shareUserInfos].token,
                                 @"identity":self.idCardNUTF.text};
-        [HttpClient POST:@"user/withdraw/bindBankcard/add" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"user/withdraw/bindBankcard/add" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             if (IsRequestTrue) {
                 [[JAlertViewHelper shareAlterHelper]showTint:@"绑定成功" duration:1.5];
                 [TTXUserInfo shareUserInfos].bankAccount = bankNum;
@@ -163,7 +163,7 @@
                 [TTXUserInfo shareUserInfos].bindingFlag = @"1";
                 [self.navigationController popViewControllerAnimated:YES];
             }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             
         }];
         

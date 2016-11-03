@@ -31,7 +31,7 @@
     self.itemTop.constant = (68/1334.)*THeight;
     NSDictionary *parms = @{@"deviceType":@"ios",
                             @"type":@"1"};
-    [HttpClient POST:@"appVersion/lastAppVersion/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"appVersion/lastAppVersion/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         NSString *newVersion = NullToSpace(jsonObject[@"data"][@"newVersion"]);
         NSString *nowVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         if (![newVersion isEqualToString:nowVersion] && ![newVersion isEqualToString:@""]) {
@@ -39,7 +39,7 @@
         }else{
             self.visionAlert.hidden = YES;
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         self.visionAlert.hidden = YES;
     }];
     
@@ -54,7 +54,7 @@
     
     NSDictionary *parms = @{@"deviceType":@"ios",
                             @"type":@"1"};
-    [HttpClient POST:@"appVersion/lastAppVersion/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"appVersion/lastAppVersion/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         NSString *newVersion = NullToSpace(jsonObject[@"data"][@"newVersion"]);
         NSString *nowVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         if (![newVersion isEqualToString:nowVersion] && ![newVersion isEqualToString:@""]) {
@@ -65,7 +65,7 @@
             [[JAlertViewHelper shareAlterHelper]showTint:@"当前已经是最新版本" duration:2.];
             self.visionAlert.hidden = YES;
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         self.visionAlert.hidden = YES;
     }];
     

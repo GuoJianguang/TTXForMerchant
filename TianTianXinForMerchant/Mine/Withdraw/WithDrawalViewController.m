@@ -184,14 +184,14 @@
         [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额不能少于1000元" duration:1.5];
         return;
     }
-    [HttpClient POST:@"mch/withdraw/sendVerifyCode" parameters:@{@"token":[TTXUserInfo shareUserInfos].token} success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/withdraw/sendVerifyCode" parameters:@{@"token":[TTXUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             [self.sendCodeBtn setTitle:@"重新获取(60)" forState:UIControlStateNormal];
             self.sendCodeBtn.enabled = NO;
             self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeLeft:) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
 }
@@ -228,11 +228,11 @@ static int timeLefted = 60;
         NSDictionary *parms = @{@"token":[TTXUserInfo shareUserInfos].token,
                                 @"verifyCode":self.codeTF.text,
                                 @"withdrawAmount":self.editMoneyTF.text};
-        [HttpClient POST:@"mch/withdraw/withdrawReq" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"mch/withdraw/withdrawReq" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             if (IsRequestTrue) {
                 [self withDrawalSuccess];
             }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             
         }];
     }

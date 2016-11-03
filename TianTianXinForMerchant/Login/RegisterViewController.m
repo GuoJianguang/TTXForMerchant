@@ -108,7 +108,7 @@
         if (success) {
          //获取验证码
             NSDictionary *parms = @{@"phone":self.phone_num_tf.text};
-            [HttpClient POST:@"sms/sendCommonCode" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+            [HttpClient POST:@"sms/sendCommonCode" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
                 if (IsRequestTrue) {
                     sender.enabled = YES;
                     [self.verifi_btn setTitle:@"重新获取(60)" forState:UIControlStateNormal];
@@ -117,7 +117,7 @@
                     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
                 }
                 
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(NSURLSessionDataTask *operation, NSError *error) {
                 sender.enabled = YES;
             }];
             
@@ -140,13 +140,13 @@
         NSDictionary *parms = @{@"phone":self.phone_num_tf.text,
                                 @"verifyCode":self.verifi_tf.text,
                                 @"password":password};
-        [HttpClient POST:@"user/register" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"user/register" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             if (IsRequestTrue) {
                 [self autoLogin];
 
             }
 
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             [SVProgressHUD dismiss];
         }];
     }
@@ -257,7 +257,7 @@
                                 @"deviceToken":[TTXUserInfo shareUserInfos].devicetoken,
                                 @"deviceType":@"ios",
                                 @"password":password};
-        [HttpClient POST:@"user/login" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"user/login" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
                 //设置用户信息
@@ -273,7 +273,7 @@
                 [self dismissViewControllerAnimated:YES completion:NULL];
             }
             
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             [SVProgressHUD dismiss];
         }];
     }

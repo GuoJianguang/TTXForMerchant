@@ -85,7 +85,7 @@
     NSDictionary *parms = @{@"mchCode":code,
                             @"pageNo":@"1",
                             @"pageSize":@"5"};
-    [HttpClient POST:@"mch/comment" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/comment" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             [self.commentArray removeAllObjects];
             NSArray *array = jsonObject[@"data"][@"data"];
@@ -94,7 +94,7 @@
             }
             [self.tableView reloadData];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
 }
@@ -111,14 +111,14 @@
 - (void)detailRequest:(NSString *)code
 {
     NSDictionary *parms = @{@"code":code};
-    [HttpClient GET:@"mch/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             self.dataSouceDic = jsonObject[@"data"];
             self.dataModel = [BussessDetailModel modelWithDic:jsonObject[@"data"]];
             [self.tableView reloadData];
         }
         [self.tableView.mj_header endRefreshing];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.tableView.mj_header endRefreshing];
     }];
 }

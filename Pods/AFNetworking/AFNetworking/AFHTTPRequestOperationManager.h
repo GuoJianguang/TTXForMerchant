@@ -1,4 +1,4 @@
-// AFHTTPRequestOperationManager.h
+// AFHTTPSessionManager.h
 // Copyright (c) 2011–2015 Alamofire Software Foundation (http://alamofire.org/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,7 +29,7 @@
 #import <CoreServices/CoreServices.h>
 #endif
 
-#import "AFHTTPRequestOperation.h"
+#import "NSURLSessionDataTask.h"
 #import "AFURLResponseSerialization.h"
 #import "AFURLRequestSerialization.h"
 #import "AFSecurityPolicy.h"
@@ -46,17 +46,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- `AFHTTPRequestOperationManager` encapsulates the common patterns of communicating with a web application over HTTP, including request creation, response serialization, network reachability monitoring, and security, as well as request operation management.
+ `AFHTTPSessionManager` encapsulates the common patterns of communicating with a web application over HTTP, including request creation, response serialization, network reachability monitoring, and security, as well as request operation management.
 
  ## Subclassing Notes
 
  Developers targeting iOS 7 or Mac OS X 10.9 or later that deal extensively with a web service are encouraged to subclass `AFHTTPSessionManager`, providing a class method that returns a shared singleton object on which authentication and other configuration can be shared across the application.
 
- For developers targeting iOS 6 or Mac OS X 10.8 or earlier, `AFHTTPRequestOperationManager` may be used to similar effect.
+ For developers targeting iOS 6 or Mac OS X 10.8 or earlier, `AFHTTPSessionManager` may be used to similar effect.
 
  ## Methods to Override
 
- To change the behavior of all request operation construction for an `AFHTTPRequestOperationManager` subclass, override `HTTPRequestOperationWithRequest:success:failure`.
+ To change the behavior of all request operation construction for an `AFHTTPSessionManager` subclass, override `HTTPRequestOperationWithRequest:success:failure`.
 
  ## Serialization
 
@@ -86,12 +86,12 @@ NS_ASSUME_NONNULL_BEGIN
 
  ## NSSecureCoding & NSCopying Caveats
 
- `AFHTTPRequestOperationManager` conforms to the `NSSecureCoding` and `NSCopying` protocols, allowing operations to be archived to disk, and copied in memory, respectively. There are a few minor caveats to keep in mind, however:
+ `AFHTTPSessionManager` conforms to the `NSSecureCoding` and `NSCopying` protocols, allowing operations to be archived to disk, and copied in memory, respectively. There are a few minor caveats to keep in mind, however:
 
  - Archives and copies of HTTP clients will be initialized with an empty operation queue.
  - NSSecureCoding cannot serialize / deserialize block properties, so an archive of an HTTP client will not include any reachability callback block that may be set.
  */
-@interface AFHTTPRequestOperationManager : NSObject <NSSecureCoding, NSCopying>
+@interface AFHTTPSessionManager : NSObject <NSSecureCoding, NSCopying>
 
 /**
  The URL used to monitor reachability, and construct requests from relative paths in methods like `requestWithMethod:URLString:parameters:`, and the `GET` / `POST` / et al. convenience methods.
@@ -140,7 +140,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///-------------------------------
 
 /**
- The security policy used by created request operations to evaluate server trust for secure connections. `AFHTTPRequestOperationManager` uses the `defaultPolicy` unless otherwise specified.
+ The security policy used by created request operations to evaluate server trust for secure connections. `AFHTTPSessionManager` uses the `defaultPolicy` unless otherwise specified.
  */
 @property (nonatomic, strong) AFSecurityPolicy *securityPolicy;
 
@@ -149,7 +149,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///------------------------------------
 
 /**
- The network reachability manager. `AFHTTPRequestOperationManager` uses the `sharedManager` by default.
+ The network reachability manager. `AFHTTPSessionManager` uses the `sharedManager` by default.
  */
 @property (readwrite, nonatomic, strong) AFNetworkReachabilityManager *reachabilityManager;
 
@@ -180,12 +180,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///---------------------------------------------
 
 /**
- Creates and returns an `AFHTTPRequestOperationManager` object.
+ Creates and returns an `AFHTTPSessionManager` object.
  */
 + (instancetype)manager;
 
 /**
- Initializes an `AFHTTPRequestOperationManager` object with the specified base URL.
+ Initializes an `AFHTTPSessionManager` object with the specified base URL.
 
  This is the designated initializer.
 
@@ -200,22 +200,22 @@ NS_ASSUME_NONNULL_BEGIN
 ///---------------------------------------
 
 /**
- Creates an `AFHTTPRequestOperation`, and sets the response serializers to that of the HTTP client.
+ Creates an `NSURLSessionDataTask`, and sets the response serializers to that of the HTTP client.
 
  @param request The request object to be loaded asynchronously during execution of the operation.
  @param success A block object to be executed when the request operation finishes successfully. This block has no return value and takes two arguments: the created request operation and the object created from the response data of request.
  @param failure A block object to be executed when the request operation finishes unsuccessfully, or that finishes successfully, but encountered an error while parsing the response data. This block has no return value and takes two arguments:, the created request operation and the `NSError` object describing the network or parsing error that occurred.
  */
-- (AFHTTPRequestOperation *)HTTPRequestOperationWithRequest:(NSURLRequest *)request
-                                                    success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                                                    failure:(nullable void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (NSURLSessionDataTask *)HTTPRequestOperationWithRequest:(NSURLRequest *)request
+                                                    success:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                                                    failure:(nullable void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
 
 ///---------------------------
 /// @name Making HTTP Requests
 ///---------------------------
 
 /**
- Creates and runs an `AFHTTPRequestOperation` with a `GET` request.
+ Creates and runs an `NSURLSessionDataTask` with a `GET` request.
 
  @param URLString The URL string used to create the request URL.
  @param parameters The parameters to be encoded according to the client request serializer.
@@ -224,13 +224,13 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-- (nullable AFHTTPRequestOperation *)GET:(NSString *)URLString
+- (nullable NSURLSessionDataTask *)GET:(NSString *)URLString
                      parameters:(nullable id)parameters
-                        success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                        failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
+                        success:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                        failure:(nullable void (^)(NSURLSessionDataTask * __nullable operation, NSError *error))failure;
 
 /**
- Creates and runs an `AFHTTPRequestOperation` with a `HEAD` request.
+ Creates and runs an `NSURLSessionDataTask` with a `HEAD` request.
 
  @param URLString The URL string used to create the request URL.
  @param parameters The parameters to be encoded according to the client request serializer.
@@ -239,13 +239,13 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-- (nullable AFHTTPRequestOperation *)HEAD:(NSString *)URLString
+- (nullable NSURLSessionDataTask *)HEAD:(NSString *)URLString
                       parameters:(nullable id)parameters
-                         success:(nullable void (^)(AFHTTPRequestOperation *operation))success
-                         failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
+                         success:(nullable void (^)(NSURLSessionDataTask *operation))success
+                         failure:(nullable void (^)(NSURLSessionDataTask * __nullable operation, NSError *error))failure;
 
 /**
- Creates and runs an `AFHTTPRequestOperation` with a `POST` request.
+ Creates and runs an `NSURLSessionDataTask` with a `POST` request.
 
  @param URLString The URL string used to create the request URL.
  @param parameters The parameters to be encoded according to the client request serializer.
@@ -254,13 +254,13 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-- (nullable AFHTTPRequestOperation *)POST:(NSString *)URLString
+- (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
                       parameters:(nullable id)parameters
-                         success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                         failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
+                         success:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                         failure:(nullable void (^)(NSURLSessionDataTask * __nullable operation, NSError *error))failure;
 
 /**
- Creates and runs an `AFHTTPRequestOperation` with a multipart `POST` request.
+ Creates and runs an `NSURLSessionDataTask` with a multipart `POST` request.
 
  @param URLString The URL string used to create the request URL.
  @param parameters The parameters to be encoded according to the client request serializer.
@@ -270,14 +270,14 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-- (nullable AFHTTPRequestOperation *)POST:(NSString *)URLString
+- (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
                       parameters:(nullable id)parameters
        constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
-                         success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                         failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
+                         success:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                         failure:(nullable void (^)(NSURLSessionDataTask * __nullable operation, NSError *error))failure;
 
 /**
- Creates and runs an `AFHTTPRequestOperation` with a `PUT` request.
+ Creates and runs an `NSURLSessionDataTask` with a `PUT` request.
 
  @param URLString The URL string used to create the request URL.
  @param parameters The parameters to be encoded according to the client request serializer.
@@ -286,13 +286,13 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-- (nullable AFHTTPRequestOperation *)PUT:(NSString *)URLString
+- (nullable NSURLSessionDataTask *)PUT:(NSString *)URLString
                      parameters:(nullable id)parameters
-                        success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                        failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
+                        success:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                        failure:(nullable void (^)(NSURLSessionDataTask * __nullable operation, NSError *error))failure;
 
 /**
- Creates and runs an `AFHTTPRequestOperation` with a `PATCH` request.
+ Creates and runs an `NSURLSessionDataTask` with a `PATCH` request.
 
  @param URLString The URL string used to create the request URL.
  @param parameters The parameters to be encoded according to the client request serializer.
@@ -301,13 +301,13 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-- (nullable AFHTTPRequestOperation *)PATCH:(NSString *)URLString
+- (nullable NSURLSessionDataTask *)PATCH:(NSString *)URLString
                        parameters:(nullable id)parameters
-                          success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                          failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
+                          success:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                          failure:(nullable void (^)(NSURLSessionDataTask * __nullable operation, NSError *error))failure;
 
 /**
- Creates and runs an `AFHTTPRequestOperation` with a `DELETE` request.
+ Creates and runs an `NSURLSessionDataTask` with a `DELETE` request.
 
  @param URLString The URL string used to create the request URL.
  @param parameters The parameters to be encoded according to the client request serializer.
@@ -316,10 +316,10 @@ NS_ASSUME_NONNULL_BEGIN
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-- (nullable AFHTTPRequestOperation *)DELETE:(NSString *)URLString
+- (nullable NSURLSessionDataTask *)DELETE:(NSString *)URLString
                         parameters:(nullable id)parameters
-                           success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                           failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
+                           success:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                           failure:(nullable void (^)(NSURLSessionDataTask * __nullable operation, NSError *error))failure;
 
 @end
 

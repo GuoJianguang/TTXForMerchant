@@ -99,7 +99,7 @@ static NSInteger pageSize = 10;
     NSDictionary *parms = @{@"pageNo":@(self.page),
                             @"pageSize":@(pageSize),
                             @"token":[TTXUserInfo shareUserInfos].token};
-    [HttpClient POST:@"mch/withdraw/list" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/withdraw/list" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
@@ -120,7 +120,7 @@ static NSInteger pageSize = 10;
             
         }
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.collectionView.mj_header endRefreshing];
         }else{
@@ -137,7 +137,7 @@ static NSInteger pageSize = 10;
     NSDictionary *parms = @{@"pageNo":@(self.page),
                             @"pageSize":@(pageSize),
                             @"token":[TTXUserInfo shareUserInfos].token};
-    [HttpClient POST:@"mch/withdraw/list" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/withdraw/list" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
@@ -158,7 +158,7 @@ static NSInteger pageSize = 10;
             
         }
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.collectionView.mj_header endRefreshing];
         }else{

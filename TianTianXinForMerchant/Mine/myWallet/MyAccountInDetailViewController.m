@@ -61,7 +61,7 @@
                             @"tranTime":@"",
                             @"pageNo":@(self.page),
                             @"pageSize":@(MacoPageSize)};
-    [HttpClient POST:@"mch/account/income" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/account/income" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             
             if (isHeader) {
@@ -84,7 +84,7 @@
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.tableView.mj_header endRefreshing];
         }else{

@@ -70,7 +70,7 @@
             //获取验证码
             NSDictionary *parms = @{@"phone":self.phone_num_tf.text,
                                     @"imageVerifyCode":self.graphCodeTF.text};
-            [HttpClient POST:@"sms/sendMchFindPwdCode" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+            [HttpClient POST:@"sms/sendMchFindPwdCode" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
                 sender.enabled = YES;
                 if (IsRequestTrue) {
                     [self.verifi_btn setTitle:@"重新获取(60)" forState:UIControlStateNormal];
@@ -79,7 +79,7 @@
                     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeLeft:) userInfo:nil repeats:YES];
                     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
                 }
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(NSURLSessionDataTask *operation, NSError *error) {
                 sender.enabled = YES;
             }];
             return ;
@@ -103,14 +103,14 @@
         NSDictionary *parms = @{@"phone":self.phone_num_tf.text,
                                 @"verifyCode":self.verifi_tf.text,
                                 @"password":password};
-        [HttpClient POST:@"mch/findPassword" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+        [HttpClient POST:@"mch/findPassword" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
                 //设置用户信息
                 [SVProgressHUD showSuccessWithStatus:@"找回密码成功,请重新登录"];
                 [self.viewController.navigationController popViewControllerAnimated:YES];
             }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         }];
     }
 }
@@ -203,17 +203,17 @@
         if (success) {
             NSDictionary *parms = @{@"phone":self.phone_num_tf.text,
                                     @"key":@"mchForgetPwd"};
-            AFHTTPRequestOperationManager *manager = [self defaultManager];
+            AFHTTPSessionManager *manager = [self defaultManager];
             NSMutableDictionary *mutalbleParameter = [NSMutableDictionary dictionaryWithDictionary:parms];
             
             NSString *url = [NSString stringWithFormat:@"%@%@",HttpClient_BaseUrl,@"verifyCode/getImageVerifyCode"];
-            [manager POST:url parameters:mutalbleParameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [manager POST:url parameters:mutalbleParameter success:^(NSURLSessionDataTask *operation, id responseObject) {
                 [SVProgressHUD dismiss];
                 UIImage *image = [[UIImage alloc]initWithData:responseObject];
                 [self.graphBtn setBackgroundImage:image forState:UIControlStateNormal];
                 [self.graphBtn setTitle:@"" forState:UIControlStateNormal];
                 sender.enabled = YES;
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(NSURLSessionDataTask *operation, NSError *error) {
                 [[JAlertViewHelper shareAlterHelper]showTint:@"图形验证码获取失败，请重试" duration:2.];
                 sender.enabled = YES;
             }];
@@ -226,8 +226,8 @@
 
 
 
--(AFHTTPRequestOperationManager*) defaultManager {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+-(AFHTTPSessionManager*) defaultManager {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
     requestSerializer.stringEncoding = RequestSerializerEncoding;
     requestSerializer.timeoutInterval = TimeoutInterval;

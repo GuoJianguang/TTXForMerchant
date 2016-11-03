@@ -42,7 +42,7 @@ NSString *errorFromDesc(NSString *desc) {
 
 @interface QNStats ()
 
-@property (nonatomic) AFHTTPRequestOperationManager *httpManager;
+@property (nonatomic) AFHTTPSessionManager *httpManager;
 @property (nonatomic) NSMutableArray *statsBuffer;
 @property (nonatomic) NSLock *bufLock;
 
@@ -104,7 +104,7 @@ QNStats *defaultStatsManager = nil;
 	_statsBuffer = [[NSMutableArray alloc] init];
 	_bufLock = [[NSLock alloc] init];
 
-	_httpManager = [[AFHTTPRequestOperationManager alloc] init];
+	_httpManager = [[AFHTTPSessionManager alloc] init];
 	_httpManager.responseSerializer = [AFJSONResponseSerializer serializer];
 
 	_count = 0;
@@ -252,10 +252,10 @@ QNStats *defaultStatsManager = nil;
 			//[req setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
 			//[req setHTTPBody:data];
 
-			AFHTTPRequestOperation *operation = [_httpManager HTTPRequestOperationWithRequest:req success:^(AFHTTPRequestOperation *operation, id responseObject) {
+			NSURLSessionDataTask *operation = [_httpManager HTTPRequestOperationWithRequest:req success:^(NSURLSessionDataTask *operation, id responseObject) {
 			                                             _count += [reqs count];
 
-							     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+							     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
 			                                             NSLog(@"post stats failed, %@", error);
 							     }];
 			[_httpManager.operationQueue addOperation:operation];
@@ -265,10 +265,10 @@ QNStats *defaultStatsManager = nil;
 
 - (void) getOutIp {
 
-	[_httpManager GET:[_statsHost stringByAppendingString:@"/v1/ip"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	[_httpManager GET:[_statsHost stringByAppendingString:@"/v1/ip"] parameters:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
 	         NSDictionary *rst = (NSDictionary *)responseObject;
 	         _sip = [rst valueForKey:@"ip"];
-	 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	 } failure:^(NSURLSessionDataTask *operation, NSError *error) {
 	         NSLog(@"get ip failed: %@", error);
 	 }];
 }

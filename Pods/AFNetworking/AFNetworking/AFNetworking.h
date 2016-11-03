@@ -32,8 +32,8 @@
 #if !TARGET_OS_WATCH
     #import "AFNetworkReachabilityManager.h"
     #import "AFURLConnectionOperation.h"
-    #import "AFHTTPRequestOperation.h"
-    #import "AFHTTPRequestOperationManager.h"
+    #import "NSURLSessionDataTask.h"
+    #import "AFHTTPSessionManager.h"
 #endif
 
 #if ( ( defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1090) || \

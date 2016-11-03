@@ -17,7 +17,7 @@
 #import "QNStats.h"
 
 @interface QNHttpManager ()
-@property (nonatomic) AFHTTPRequestOperationManager *httpManager;
+@property (nonatomic) AFHTTPSessionManager *httpManager;
 @property UInt32 timeout;
 @property (nonatomic, strong) QNUrlConvert converter;
 @property (nonatomic) QNDnsManager *dns;
@@ -32,7 +32,7 @@ static NSURL *buildUrl(NSString *host, NSNumber *port, NSString *path){
 	return [[NSURL alloc] initWithString:p];
 }
 
-static BOOL needRetry(AFHTTPRequestOperation *op, NSError *error){
+static BOOL needRetry(NSURLSessionDataTask *op, NSError *error){
 	if (error != nil) {
 		return error.code < -1000;
 	}
@@ -50,7 +50,7 @@ static BOOL needRetry(AFHTTPRequestOperation *op, NSError *error){
                 upStatsDropRate:(float)dropRate
                             dns:(QNDnsManager *)dns {
 	if (self = [super init]) {
-		_httpManager = [[AFHTTPRequestOperationManager alloc] init];
+		_httpManager = [[AFHTTPSessionManager alloc] init];
 		_httpManager.responseSerializer = [AFJSONResponseSerializer serializer];
 		_timeout = timeout;
 		_converter = converter;
@@ -65,7 +65,7 @@ static BOOL needRetry(AFHTTPRequestOperation *op, NSError *error){
 	return [self initWithTimeout:60 urlConverter:nil upStatsDropRate:-1 dns:nil];
 }
 
-+ (QNResponseInfo *)buildResponseInfo:(AFHTTPRequestOperation *)operation
++ (QNResponseInfo *)buildResponseInfo:(NSURLSessionDataTask *)operation
                             withError:(NSError *)error
                          withDuration:(double)duration
                          withResponse:(id)responseObject
@@ -162,9 +162,9 @@ static BOOL needRetry(AFHTTPRequestOperation *op, NSError *error){
 	[request setValue:nil forHTTPHeaderField:@"Accept-Language"];
 
 
-	AFHTTPRequestOperation *operation = [_httpManager
+	NSURLSessionDataTask *operation = [_httpManager
 	                                     HTTPRequestOperationWithRequest:request
-	                                     success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+	                                     success: ^(NSURLSessionDataTask *operation, id responseObject) {
 	                                             double duration = [[NSDate date] timeIntervalSinceDate:startTime];
 	                                             QNResponseInfo *info = [QNHttpManager buildResponseInfo:operation withError:nil withDuration:duration withResponse:operation.responseData withIp:ip];
 	                                             NSDictionary *resp = nil;
@@ -173,7 +173,7 @@ static BOOL needRetry(AFHTTPRequestOperation *op, NSError *error){
 						     }
 	                                             [self recordRst:stats response:operation.response error:nil st:st];
 	                                             completeBlock(info, resp);
-					     }                                                                failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
+					     }                                                                failure: ^(NSURLSessionDataTask *operation, NSError *error) {
 	                                             [self recordRst:stats response:operation.response error:error st:st];
 	                                             if (_converter != nil && (index+1 < ips.count || times>0) && needRetry(operation, error)) {
 
@@ -192,7 +192,7 @@ static BOOL needRetry(AFHTTPRequestOperation *op, NSError *error){
 					     }
 	                                    ];
 
-	__block AFHTTPRequestOperation *op = nil;
+	__block NSURLSessionDataTask *op = nil;
 	if (cancelBlock) {
 		op = operation;
 	}

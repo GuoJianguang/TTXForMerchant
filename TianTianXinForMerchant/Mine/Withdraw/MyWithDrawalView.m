@@ -28,7 +28,7 @@
 - (void)updataInfo
 {
 //    [self layoutSubviews];
-    [HttpClient GET:@"mch/withdraw" parameters:@{@"token":[TTXUserInfo shareUserInfos].token} success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/withdraw" parameters:@{@"token":[TTXUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             [TTXUserInfo shareUserInfos].bindingFlag = NullToNumber(jsonObject[@"data"][@"bankAccountFlag"]);
             [TTXUserInfo shareUserInfos].bankAccountRealName = NullToSpace(jsonObject[@"data"][@"realName"]);
@@ -36,7 +36,7 @@
         }
         [self.tableView reloadData];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.tableView reloadData];
         
     }];

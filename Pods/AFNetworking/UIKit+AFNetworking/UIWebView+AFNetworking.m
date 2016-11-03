@@ -25,21 +25,21 @@
 
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 
-#import "AFHTTPRequestOperation.h"
+#import "NSURLSessionDataTask.h"
 #import "AFURLResponseSerialization.h"
 #import "AFURLRequestSerialization.h"
 
 @interface UIWebView (_AFNetworking)
-@property (readwrite, nonatomic, strong, setter = af_setHTTPRequestOperation:) AFHTTPRequestOperation *af_HTTPRequestOperation;
+@property (readwrite, nonatomic, strong, setter = af_setHTTPRequestOperation:) NSURLSessionDataTask *af_HTTPRequestOperation;
 @end
 
 @implementation UIWebView (_AFNetworking)
 
-- (AFHTTPRequestOperation *)af_HTTPRequestOperation {
-    return (AFHTTPRequestOperation *)objc_getAssociatedObject(self, @selector(af_HTTPRequestOperation));
+- (NSURLSessionDataTask *)af_HTTPRequestOperation {
+    return (NSURLSessionDataTask *)objc_getAssociatedObject(self, @selector(af_HTTPRequestOperation));
 }
 
-- (void)af_setHTTPRequestOperation:(AFHTTPRequestOperation *)operation {
+- (void)af_setHTTPRequestOperation:(NSURLSessionDataTask *)operation {
     objc_setAssociatedObject(self, @selector(af_HTTPRequestOperation), operation, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -123,12 +123,12 @@
 
     request = [self.requestSerializer requestBySerializingRequest:request withParameters:nil error:nil];
 
-    self.af_HTTPRequestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    self.af_HTTPRequestOperation = [[NSURLSessionDataTask alloc] initWithRequest:request];
     self.af_HTTPRequestOperation.responseSerializer = self.responseSerializer;
 
     __weak __typeof(self)weakSelf = self;
     [self.af_HTTPRequestOperation setDownloadProgressBlock:progress];
-    [self.af_HTTPRequestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id __unused responseObject) {
+    [self.af_HTTPRequestOperation setCompletionBlockWithSuccess:^(NSURLSessionDataTask *operation, id __unused responseObject) {
         NSData *data = success ? success(operation.response, operation.responseData) : operation.responseData;
 
 #pragma clang diagnostic push
@@ -141,7 +141,7 @@
         }
 
 #pragma clang diagnostic pop
-    } failure:^(AFHTTPRequestOperation * __unused operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask * __unused operation, NSError *error) {
         if (failure) {
             failure(error);
         }

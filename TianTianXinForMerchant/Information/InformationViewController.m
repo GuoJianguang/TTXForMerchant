@@ -64,9 +64,9 @@
 #pragma mark - 公告的请求
 - (void)getTopInfoRequest
 {
-    [HttpClient POST:@"user/information/title/get" parameters:nil success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"user/information/title/get" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
 
@@ -83,7 +83,7 @@
 
 - (void)getBannerRequest
 {
-    [HttpClient POST:@"information/recommend" parameters:nil success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"information/recommend" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             [self.bannerArray removeAllObjects];
             NSArray *array = jsonObject[@"data"];
@@ -93,7 +93,7 @@
             [self.tableView reloadData];
             [self.tableView judgeIsHaveDataSouce:self.dataSouceArray andBannerArray:self.bannerArray];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
    
     }];
     
@@ -117,7 +117,7 @@ static NSInteger pangeCount = 20;
     NSDictionary *parms = @{@"pageNo":@(self.page),
                             @"pageSize":@(pangeCount)};
     
-    [HttpClient GET:@"information/list" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"information/list" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
@@ -139,7 +139,7 @@ static NSInteger pangeCount = 20;
             [self.tableView reloadData];
         }
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
     }];

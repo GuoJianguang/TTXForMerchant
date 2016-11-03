@@ -50,7 +50,7 @@
 
     self.datasouceArray = [NSMutableArray arrayWithArray:@[model1,model2]];
     [self.tableView reloadData];
-    [HttpClient GET:@"mch/wallet" parameters:@{@"token":[TTXUserInfo shareUserInfos].token} success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/wallet" parameters:@{@"token":[TTXUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             self.moneyLabel.text = [NSString stringWithFormat:@"账户余额:￥ %@", NullToNumber(jsonObject[@"data"][@"balance"])];
             [TTXUserInfo shareUserInfos].aviableBalance = NullToNumber(jsonObject[@"data"][@"balance"]);
@@ -59,7 +59,7 @@
             self.moneyLabel.attributedText = attributedString2;
 
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         self.moneyLabel.text = [NSString stringWithFormat:@"账户余额:￥ %@", [TTXUserInfo shareUserInfos].aviableBalance];
     }];
     

@@ -159,7 +159,7 @@
     [self.waitFahuoTableView.mj_header beginRefreshing];
     
     NSDictionary *parms = @{@"code":[TTXUserInfo shareUserInfos].code};
-    [HttpClient GET:@"mch/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if ([jsonObject[@"data"][@"unreadMchMsgCountVo"] isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *unreadMsgCountVo = jsonObject[@"data"][@"unreadMchMsgCountVo"];
@@ -177,7 +177,7 @@
             [self.sortView setNumberForItem:[[TTXUserInfo shareUserInfos].hasDeliveredCount integerValue] withIndex:1];
             [self.sortView setNumberForItem:[[TTXUserInfo shareUserInfos].waitDeliverCount integerValue] withIndex:2];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
 
@@ -281,7 +281,7 @@
             break;
     }
     
-    [HttpClient GET:@"mch/business/shopOrder" parameters:prams success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/business/shopOrder" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [tableView.mj_header endRefreshing];
@@ -317,7 +317,7 @@
         }
         [tableView.mj_header endRefreshing];
         [tableView.mj_footer endRefreshing];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [tableView.mj_header endRefreshing];
         }else{
@@ -488,7 +488,7 @@
 - (void)notificationWaitFahuo
 {
     NSDictionary *parms = @{@"code":[TTXUserInfo shareUserInfos].code};
-    [HttpClient GET:@"mch/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if ([jsonObject[@"data"][@"unreadMchMsgCountVo"] isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *unreadMsgCountVo = jsonObject[@"data"][@"unreadMchMsgCountVo"];
@@ -506,7 +506,7 @@
             [self.waitFahuoTableView.mj_header beginRefreshing];
             self.swipeView.currentPage = 2;
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
     
@@ -515,7 +515,7 @@
 - (void)notificationyetComplet
 {
     NSDictionary *parms = @{@"code":[TTXUserInfo shareUserInfos].code};
-    [HttpClient GET:@"mch/get" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient GET:@"mch/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if ([jsonObject[@"data"][@"unreadMchMsgCountVo"] isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *unreadMsgCountVo = jsonObject[@"data"][@"unreadMchMsgCountVo"];
@@ -532,7 +532,7 @@
             [self.yetCompleteTableView.mj_header beginRefreshing];
             self.swipeView.currentPage = 0;
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
 }

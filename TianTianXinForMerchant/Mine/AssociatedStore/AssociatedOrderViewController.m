@@ -89,7 +89,7 @@
 - (void)myStoreRequest
 {
     NSDictionary *prams = @{@"token":[TTXUserInfo shareUserInfos].token};
-    [HttpClient POST:@"mch/link/mchs" parameters:prams success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/link/mchs" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             self.tableViewDatasouce.type = AssociatedSelcetType_store;
             [self.tableViewDatasouce.storeDataSouceArray removeAllObjects];
@@ -103,7 +103,7 @@
             [self.tableViewDatasouce.storeDataSouceArray insertObject:allStore atIndex:0];
             [self.selectTalbeView reloadData];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
 
     }];
 }
@@ -116,7 +116,7 @@
                             @"tranTime":self.tranTime,
                             @"pageNo":@(self.page),
                             @"pageSize":@(MacoPageSize)};
-    [HttpClient POST:@"mch/link/orders" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/link/orders" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (self.page == 1) {
                 self.moneyLabel.text = [NSString stringWithFormat:@"￥%.2f",[ NullToNumber(jsonObject[@"data"][@"sumAmount"]) doubleValue]];
@@ -141,7 +141,7 @@
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
 
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.tableView.mj_header endRefreshing];
         }else{

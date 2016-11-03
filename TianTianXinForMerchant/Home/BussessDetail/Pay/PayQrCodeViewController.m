@@ -50,10 +50,10 @@
                             @"height":@(width),
                             @"mchCode":self.dataModel.code};
     [SVProgressHUD showWithStatus:@"正在生成二维码" maskType:SVProgressHUDMaskTypeBlack];
-    AFHTTPRequestOperationManager *manager = [self defaultManager];
+    AFHTTPSessionManager *manager = [self defaultManager];
     NSMutableDictionary *mutalbleParameter = [NSMutableDictionary dictionaryWithDictionary:parms];
     NSString *url = [NSString stringWithFormat:@"%@%@",HttpClient_BaseUrl,@"qrCode/mch/generate"];
-    [manager POST:url parameters:mutalbleParameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:url parameters:mutalbleParameter success:^(NSURLSessionDataTask *operation, id responseObject) {
         [SVProgressHUD dismiss];
         UIImage *image = [[UIImage alloc]initWithData:responseObject];
         MyQrCodeView *qrCodeView = [[MyQrCodeView alloc]init];
@@ -64,15 +64,15 @@
             make.edges.equalTo(self.navigationController.view).insets(insets);
         }];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [SVProgressHUD dismiss];
         [[JAlertViewHelper shareAlterHelper]showTint:@"图形验证码获取失败，请重试" duration:2.];
         sender.enabled = YES;
     }];
 }
 
--(AFHTTPRequestOperationManager*) defaultManager {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+-(AFHTTPSessionManager*) defaultManager {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
     requestSerializer.stringEncoding = RequestSerializerEncoding;
     requestSerializer.timeoutInterval = TimeoutInterval;

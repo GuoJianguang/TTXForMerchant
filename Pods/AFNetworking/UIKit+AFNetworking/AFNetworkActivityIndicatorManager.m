@@ -23,7 +23,7 @@
 
 #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED)
 
-#import "AFHTTPRequestOperation.h"
+#import "NSURLSessionDataTask.h"
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
 #import "AFURLSessionManager.h"

@@ -102,7 +102,7 @@
 - (void)getAllOrderRequest
 {
     NSDictionary *prams = @{@"token":[TTXUserInfo shareUserInfos].token};
-    [HttpClient POST:@"mch/link/settles" parameters:prams success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/link/settles" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             self.totalMoney.text = [NSString stringWithFormat:@"￥%.2f",[ NullToNumber(jsonObject[@"data"][@"totalAmount"]) doubleValue]];
             self.jiesuanmoney.text = [NSString stringWithFormat:@"￥%.2f",[ NullToNumber(jsonObject[@"data"][@"totalSettleAmount"]) doubleValue]];
@@ -127,7 +127,7 @@
             [self.collectionView judgeIsHaveDataSouce:self.dataSouceArray];
         }
 
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];
         [self.collectionView showRereshBtnwithALerString:@"服务器忙，请刷新重试"];
@@ -143,7 +143,7 @@
                             @"pageNo":@(self.page),
                             @"pageSize":@(MacoPageSize)};
     
-    [HttpClient POST:@"mch/link/searchSettles" parameters:parms success:^(AFHTTPRequestOperation *operation, id jsonObject) {
+    [HttpClient POST:@"mch/link/searchSettles" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (self.page == 1) {
                 self.totalMoney.text = [NSString stringWithFormat:@"￥%.2f",[ NullToNumber(jsonObject[@"data"][@"totalAmount"]) doubleValue]];
@@ -169,7 +169,7 @@
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.collectionView.mj_header endRefreshing];
         }else{

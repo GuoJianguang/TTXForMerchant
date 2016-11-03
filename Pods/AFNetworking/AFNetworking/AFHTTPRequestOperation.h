@@ -1,4 +1,4 @@
-// AFHTTPRequestOperation.h
+// NSURLSessionDataTask.h
 // Copyright (c) 2011–2015 Alamofire Software Foundation (http://alamofire.org/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,9 +25,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- `AFHTTPRequestOperation` is a subclass of `AFURLConnectionOperation` for requests using the HTTP or HTTPS protocols. It encapsulates the concept of acceptable status codes and content types, which determine the success or failure of a request.
+ `NSURLSessionDataTask` is a subclass of `AFURLConnectionOperation` for requests using the HTTP or HTTPS protocols. It encapsulates the concept of acceptable status codes and content types, which determine the success or failure of a request.
  */
-@interface AFHTTPRequestOperation : AFURLConnectionOperation
+@interface NSURLSessionDataTask : AFURLConnectionOperation
 
 ///------------------------------------------------
 /// @name Getting HTTP URL Connection Information
@@ -62,8 +62,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param success The block to be executed on the completion of a successful request. This block has no return value and takes two arguments: the receiver operation and the object constructed from the response data of the request.
  @param failure The block to be executed on the completion of an unsuccessful request. This block has no return value and takes two arguments: the receiver operation and the error that occurred during the request.
  */
-- (void)setCompletionBlockWithSuccess:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                              failure:(nullable void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (void)setCompletionBlockWithSuccess:(nullable void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                              failure:(nullable void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
 
 @end
 
