@@ -33,22 +33,22 @@
     NSMutableDictionary *mutalbleParameter = [NSMutableDictionary dictionaryWithDictionary:parameters];
     [class additionalOperatingWithManager:manager parameter:mutalbleParameter];
     
-    return  [manager POST:URLString parameters:mutalbleParameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [[self class] handleWithOperation:task responseObject:responseObject success:success];
-
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [[self class] failureHandleWithOperation:task error:error callBack:failure];
-
-    }];
-    
-//    return [manager POST:URLString parameters:mutalbleParameter progress:^(NSProgress * _Nonnull uploadProgress) {
-//        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    return  [manager POST:URLString parameters:mutalbleParameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        [[self class] handleWithOperation:task responseObject:responseObject success:success];
+//
 //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //        [[self class] failureHandleWithOperation:task error:error callBack:failure];
 //
 //    }];
+    
+    return [manager POST:URLString parameters:mutalbleParameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [[self class] handleWithOperation:task responseObject:responseObject success:success];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [[self class] failureHandleWithOperation:task error:error callBack:failure];
+
+    }];
 }
 
 +(NSURLSessionDataTask *)POST:(NSString *)URLString header:(id)headerPara body:(id)bodyPara success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
@@ -86,13 +86,13 @@
     NSMutableDictionary *mutalbleParameter = [NSMutableDictionary dictionaryWithDictionary:parameters];
     [class additionalOperatingWithManager:manager parameter:mutalbleParameter];
     
-    return [manager GET:URLString parameters:mutalbleParameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [[self class]handleWithOperation:task responseObject:responseObject success:success];
-
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [[self class] failureHandleWithOperation:task error:error callBack:failure];
-
-    }];
+//    return [manager GET:URLString parameters:mutalbleParameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        [[self class]handleWithOperation:task responseObject:responseObject success:success];
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        [[self class] failureHandleWithOperation:task error:error callBack:failure];
+//
+//    }];
     
     return  [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
