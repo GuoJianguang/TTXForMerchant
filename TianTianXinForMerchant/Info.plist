@@ -75,7 +75,7 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>是否许允此App使用蓝牙</string>
