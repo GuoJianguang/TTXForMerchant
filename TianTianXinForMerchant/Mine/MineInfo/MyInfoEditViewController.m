@@ -10,7 +10,6 @@
 #import "MyWalletTableViewCell.h"
 #import "EditPasswordViewController.h"
 #import "ZLPhoto.h"
-#import <QiniuSDK.h>
 #import "LogOutTableViewCell.h"
 #import "AboutUsViewController.h"
 #import "AboutUsNewViewController.h"

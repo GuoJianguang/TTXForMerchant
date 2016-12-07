@@ -14,30 +14,30 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - HappyDNS (0.3.10)
+  - AMapFoundation (1.2.0)
+  - AMapLocation (2.1.1):
+    - AMapFoundation (~> 1.2)
   - MJRefresh (3.0.7)
-  - Qiniu (7.1.1):
-    - AFNetworking (~> 3)
-    - HappyDNS (~> 0.3)
   - UMengAnalytics-NO-IDFA (4.1.1)
   - ZXingObjC (3.1.0):
     - ZXingObjC/All (= 3.1.0)
   - ZXingObjC/All (3.1.0)
 
 DEPENDENCIES:
+  - AFNetworking
+  - AMapLocation
   - MJRefresh (~> 3.0.7)
-  - Qiniu (~> 7.1.1)
   - UMengAnalytics-NO-IDFA
   - ZXingObjC (~> 3.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
+  AMapFoundation: 8acc2bf4eed79aab4d21002ddb8b24a6f3f3621c
+  AMapLocation: dd203f76b034ef5cb546600f4e1ffad2a3a14072
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
-  Qiniu: 5e5d7d759d22393bb4b87cdfacf8fab951260f3e
   UMengAnalytics-NO-IDFA: 1064992c1b7aaa22823179c0b33a664813fd7a85
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 786c55d197224778bee6ddffe99b6fe2860f27d0
+PODFILE CHECKSUM: 8ee4ce0573ef29e7bdf973191d83687a72b608d3
 
 COCOAPODS: 1.1.0.beta.1

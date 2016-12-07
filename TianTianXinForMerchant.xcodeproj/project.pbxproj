@@ -201,7 +201,6 @@
 		2D7C045F1C746B8C00BE823C /* BussessInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C043A1C746B8C00BE823C /* BussessInfoTableViewCell.m */; };
 		2D7C04601C746B8C00BE823C /* BussessInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C043B1C746B8C00BE823C /* BussessInfoTableViewCell.xib */; };
 		2D7C04631C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04401C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m */; };
-		2D7C04641C746B8C00BE823C /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C04421C746B8C00BE823C /* LineDashPolyline.m */; };
 		2D7C04681C746B8C00BE823C /* Map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C04491C746B8C00BE823C /* Map.xcassets */; };
 		2D7C04691C746B8C00BE823C /* ShowBussessImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C044B1C746B8C00BE823C /* ShowBussessImageViewController.m */; };
 		2D7C046A1C746B8C00BE823C /* ShowBussessImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7C044C1C746B8C00BE823C /* ShowBussessImageViewController.xib */; };
@@ -326,7 +325,6 @@
 		BCB06D871D7424EA0035A369 /* JiesuanPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB06D851D7424EA0035A369 /* JiesuanPayViewController.xib */; };
 		BCCFFEB01DBF862D00034D85 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFFEAD1DBF862D00034D85 /* AMapFoundationKit.framework */; };
 		BCCFFEB11DBF862D00034D85 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFFEAE1DBF862D00034D85 /* AMapLocationKit.framework */; };
-		BCCFFEB21DBF862D00034D85 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCFFEAF1DBF862D00034D85 /* MAMapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -707,8 +705,6 @@
 		2D7C043B1C746B8C00BE823C /* BussessInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BussessInfoTableViewCell.xib; sourceTree = "<group>"; };
 		2D7C043F1C746B8C00BE823C /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
 		2D7C04401C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
-		2D7C04411C746B8C00BE823C /* LineDashPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDashPolyline.h; sourceTree = "<group>"; };
-		2D7C04421C746B8C00BE823C /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
 		2D7C04491C746B8C00BE823C /* Map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Map.xcassets; sourceTree = "<group>"; };
 		2D7C044A1C746B8C00BE823C /* ShowBussessImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBussessImageViewController.h; sourceTree = "<group>"; };
 		2D7C044B1C746B8C00BE823C /* ShowBussessImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBussessImageViewController.m; sourceTree = "<group>"; };
@@ -921,7 +917,6 @@
 				2D7C04011C74520F00BE823C /* libsqlite3.tbd in Frameworks */,
 				2D7C03521C744B1F00BE823C /* libUMSocial_Sdk_4.4.a in Frameworks */,
 				2D7C03501C744B1F00BE823C /* libUMessage_Sdk_1.2.3.a in Frameworks */,
-				BCCFFEB21DBF862D00034D85 /* MAMapKit.framework in Frameworks */,
 				2D7C035D1C744B1F00BE823C /* libWeChatSDK.a in Frameworks */,
 				2D7C035C1C744B1F00BE823C /* libSocialWechat.a in Frameworks */,
 				BCCFFEB11DBF862D00034D85 /* AMapLocationKit.framework in Frameworks */,
@@ -1811,8 +1806,6 @@
 				2D7C04321C746B8C00BE823C /* BussessDetailModel.m */,
 				2D7C043F1C746B8C00BE823C /* CHTCollectionViewWaterfallCell.h */,
 				2D7C04401C746B8C00BE823C /* CHTCollectionViewWaterfallCell.m */,
-				2D7C04411C746B8C00BE823C /* LineDashPolyline.h */,
-				2D7C04421C746B8C00BE823C /* LineDashPolyline.m */,
 				2D7C04491C746B8C00BE823C /* Map.xcassets */,
 				2D7C044A1C746B8C00BE823C /* ShowBussessImageViewController.h */,
 				2D7C044B1C746B8C00BE823C /* ShowBussessImageViewController.m */,
@@ -2407,7 +2400,6 @@
 				2DAFABFB1C7C11F5007B4DA0 /* AssociatedOrderViewController.m in Sources */,
 				2D7C03A21C744E0B00BE823C /* BaseTableViewCell.m in Sources */,
 				2D7C03FF1C74517000BE823C /* TTXUserInfo.m in Sources */,
-				2D7C04641C746B8C00BE823C /* LineDashPolyline.m in Sources */,
 				2D7C041E1C74633200BE823C /* InformationBannerTableViewCell.m in Sources */,
 				2D8CDF8B1C8984FC00EDD0D3 /* SureOrderView.m in Sources */,
 				2D7C03801C744B1F00BE823C /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
@@ -2751,7 +2743,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third",
-					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/GDMap",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/TencentOpenAPI",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TianTianXinForMerchant/PrefixHeader.pch";
@@ -2784,7 +2775,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third",
-					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/GDMap",
 					"$(PROJECT_DIR)/TianTianXinForMerchant/Third/share/TencentOpenAPI",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TianTianXinForMerchant/PrefixHeader.pch";

@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <MAMapKit/MAMapKit.h>
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
 //#import "UMSocialQQHandler.h"
@@ -86,6 +85,7 @@
     
     //高德地图
 //    [MAMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
+    [[AMapServices sharedServices] setEnableHTTPS:YES];
     [AMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
 //    [AMapSearchServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
     //友盟分享的key
