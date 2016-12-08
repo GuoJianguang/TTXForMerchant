@@ -103,10 +103,7 @@
     //    //微信支付
     [WXApi registerApp:@"wx8f7e25bacc68c476" withDescription:@"com.ttx.TianTianXinForMerchant"];
     [self setUMPush:launchOptions];
-//    [UMSocialQQHandler setSupportWebView:YES];
-    //设置微信AppId，设置分享url，默认使用友盟的网址
-//    [UMSocialWechatHandler setWXAppId:@"wx8f7e25bacc68c476" appSecret:@"b5b3d73959f2d861c6f06f68bbb0935a" url:@"http://www.umeng.com/social"];
-      [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx8f7e25bacc68c476" appSecret:@"b5b3d73959f2d861c6f06f68bbb0935a" redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx8f7e25bacc68c476" appSecret:@"b5b3d73959f2d861c6f06f68bbb0935a" redirectURL:@"http://mobile.umeng.com/social"];
 //    [UMSocialConfig hiddenNotInstallPlatforms:nil];
     
 }

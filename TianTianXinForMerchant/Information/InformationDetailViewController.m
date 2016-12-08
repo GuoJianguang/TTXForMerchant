@@ -32,8 +32,6 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.dataModel.cover] placeholderImage:AppIconImage options:SDWebImageRefreshCached];
     [self.webView addSubview:self.imageView];
     
-    
-    
     //设置用户自定义的平台
     [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),
                                                @(UMSocialPlatformType_WechatTimeLine),
