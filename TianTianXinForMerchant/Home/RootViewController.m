@@ -42,7 +42,7 @@ static NSString *hasComplete  = @"hasComplete";//已完成
 
 }
 
-
+#pragma mark - 当进入程序有推送的时候执行此方法
 - (void)notifica:(NSDictionary *)notifiInfo
 {
     if ([TTXUserInfo shareUserInfos].currentLogined) {

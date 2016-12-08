@@ -44,7 +44,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>12</string>
+	<string>13</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>iosamap</string>
@@ -76,6 +76,8 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
 	</dict>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>是否许允此App使用蓝牙</string>
