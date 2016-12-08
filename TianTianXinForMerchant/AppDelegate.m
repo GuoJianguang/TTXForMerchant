@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "UMSocial.h"
+//#import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
 //#import "UMSocialQQHandler.h"
 #import "UMessage.h"
@@ -89,7 +89,8 @@
     [AMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
 //    [AMapSearchServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
     //友盟分享的key
-    [UMSocialData setAppKey:YoumengKey];
+    //设置友盟appkey
+    [[UMSocialManager defaultManager] setUmSocialAppkey:YoumengKey];
     //友盟推送设置
     [UMessage startWithAppkey:YoumengKey launchOptions:launchOptions];
     //友盟统计设置
@@ -104,8 +105,9 @@
     [self setUMPush:launchOptions];
 //    [UMSocialQQHandler setSupportWebView:YES];
     //设置微信AppId，设置分享url，默认使用友盟的网址
-    [UMSocialWechatHandler setWXAppId:@"wx8f7e25bacc68c476" appSecret:@"b5b3d73959f2d861c6f06f68bbb0935a" url:@"http://www.umeng.com/social"];
-    [UMSocialConfig hiddenNotInstallPlatforms:nil];
+//    [UMSocialWechatHandler setWXAppId:@"wx8f7e25bacc68c476" appSecret:@"b5b3d73959f2d861c6f06f68bbb0935a" url:@"http://www.umeng.com/social"];
+      [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx8f7e25bacc68c476" appSecret:@"b5b3d73959f2d861c6f06f68bbb0935a" redirectURL:@"http://mobile.umeng.com/social"];
+//    [UMSocialConfig hiddenNotInstallPlatforms:nil];
     
 }
 

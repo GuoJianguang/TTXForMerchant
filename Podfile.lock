@@ -17,8 +17,11 @@ PODS:
   - AMapFoundation (1.2.0)
   - AMapLocation (2.1.1):
     - AMapFoundation (~> 1.2)
+  - IQKeyboardManager (3.3.7)
   - MJRefresh (3.0.7)
-  - UMengAnalytics-NO-IDFA (4.1.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - ZXingObjC (3.1.0):
     - ZXingObjC/All (= 3.1.0)
   - ZXingObjC/All (3.1.0)
@@ -26,18 +29,20 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - AMapLocation
+  - IQKeyboardManager (~> 3.3.7)
   - MJRefresh (~> 3.0.7)
-  - UMengAnalytics-NO-IDFA (~> 4.1.1)
+  - SDWebImage (~> 3.8.2)
   - ZXingObjC (~> 3.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMapFoundation: 8acc2bf4eed79aab4d21002ddb8b24a6f3f3621c
   AMapLocation: dd203f76b034ef5cb546600f4e1ffad2a3a14072
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
-  UMengAnalytics-NO-IDFA: 1064992c1b7aaa22823179c0b33a664813fd7a85
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 4318e521b6dc028a84b030c09604a524398e515d
+PODFILE CHECKSUM: 5832615e7f64a193d85f516181692f35029eb518
 
 COCOAPODS: 1.1.0.beta.1

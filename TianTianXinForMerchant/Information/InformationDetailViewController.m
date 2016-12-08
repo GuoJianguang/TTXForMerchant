@@ -7,9 +7,9 @@
 //
 
 #import "InformationDetailViewController.h"
-#import "UMSocial.h"
+#import <UShareUI/UShareUI.h>
 
-@interface InformationDetailViewController ()<BasenavigationDelegate,UMSocialUIDelegate>
+@interface InformationDetailViewController ()<BasenavigationDelegate>
 
 @property (nonatomic, strong)UIImageView *imageView;
 @end
@@ -31,6 +31,14 @@
     self.imageView.hidden = YES;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.dataModel.cover] placeholderImage:AppIconImage options:SDWebImageRefreshCached];
     [self.webView addSubview:self.imageView];
+    
+    
+    
+    //设置用户自定义的平台
+    [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),
+                                               @(UMSocialPlatformType_WechatTimeLine),
+                                               ]];
+
 }
 
 
@@ -45,59 +53,79 @@
 #pragma mark - 分享
 - (void)detailBtnClick
 {
-    [UMSocialData defaultData].extConfig.wechatSessionData.url = self.dataModel.detailUrl;
-    [UMSocialData defaultData].extConfig.wechatTimelineData.url = self.dataModel.detailUrl;
-    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"";
-    [UMSocialData defaultData].extConfig.wechatTimelineData.title = nil;
+    [UMSocialUIManager removeAllCustomPlatformWithoutFilted];
+    [UMSocialShareUIConfig shareInstance].sharePageGroupViewConfig.sharePageGroupViewPostionType = UMSocialSharePageGroupViewPositionType_Bottom;
+    [UMSocialShareUIConfig shareInstance].sharePageScrollViewConfig.shareScrollViewPageItemStyleType = UMSocialPlatformItemViewBackgroudType_IconAndBGRadius;
+    [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+        [self runShareWithType:platformType];
+    }];
+}
 
-    [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeWeb;
-    //先判断bundleId是什么（有企业版）
-    NSString *bundleID =  [[NSBundle mainBundle] bundleIdentifier];
-    if ([bundleID isEqualToString:@"com.ttx.tiantianxcn"]) {
-        [UMSocialSnsService presentSnsIconSheetView:self
-                                             appKey:YoumengKey_Inhouse
-                                          shareText:self.dataModel.title
-                                         shareImage:self.imageView.image
-                                    shareToSnsNames:[NSArray arrayWithObjects:UMShareToWechatSession,UMShareToWechatTimeline,nil]
-                                           delegate:self];
-        return;
-    }
+- (void)runShareWithType:(UMSocialPlatformType)type
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:YoumengKey
-                                      shareText:self.dataModel.title
-                                     shareImage:self.imageView.image
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToWechatSession,UMShareToWechatTimeline,nil]
-                                       delegate:self];
+    //创建网页内容对象
+    NSString* thumbURL =  self.dataModel.cover;
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.dataModel.title descr:self.dataModel.title thumImage:thumbURL];
+    //设置网页地址
+    shareObject.webpageUrl = self.dataModel.detailUrl;
+    
+    //分享消息对象设置分享内容对象
+    messageObject.shareObject = shareObject;
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:type messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        if (error) {
+            UMSocialLogInfo(@"************Share fail with error %@*********",error);
+        }else{
+            if ([data isKindOfClass:[UMSocialShareResponse class]]) {
+                UMSocialShareResponse *resp = data;
+                //分享结果消息
+                UMSocialLogInfo(@"response message is %@",resp.message);
+                //第三方原始返回的数据
+                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
+                
+            }else{
+                UMSocialLogInfo(@"response data is %@",data);
+            }
+        }
+        [[JAlertViewHelper shareAlterHelper]showTint:@"分享失败，请重试..." duration:2.];
+//        [self alertWithError:error];
+    }];
+
 }
 
-
--(void)didSelectSocialPlatform:(NSString *)platformName withSocialData:(UMSocialData *)socialData
+- (void)alertWithError:(NSError *)error
 {
-//    UMSocialWXMessageTypeWeb
-//    if (platformName == UMShareToQzone) {
-//        socialData.shareText = @"分享到QQ空间的文字内容";
-//        socialData.shareImage = LoadingErrorImage;
-//    }
-//    else{
-//        
-//    }
-}
-
--(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
-{
-    //根据`responseCode`得到发送结果,如果分享成功
-    if(response.responseCode == UMSResponseCodeSuccess)
-    {
-        //得到分享到的微博平台名
-        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    NSString *result = nil;
+    if (!error) {
+        result = [NSString stringWithFormat:@"Share succeed"];
     }
+    else{
+        NSMutableString *str = [NSMutableString string];
+        if (error.userInfo) {
+            for (NSString *key in error.userInfo) {
+                [str appendFormat:@"%@ = %@\n", key, error.userInfo[key]];
+            }
+        }
+        if (error) {
+            result = [NSString stringWithFormat:@"Share fail with error code: %d\n%@",(int)error.code, str];
+        }
+        else{
+            result = [NSString stringWithFormat:@"Share fail"];
+        }
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"share"
+                                                    message:result
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"sure", @"确定")
+                                          otherButtonTitles:nil];
+    [alert show];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
