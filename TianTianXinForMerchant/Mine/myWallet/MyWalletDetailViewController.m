@@ -83,7 +83,7 @@
 - (void)detailBtnClick
 {
     BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
-    htmlVC.htmlUrl = @"http://www.tiantianxcn.com/html5/forapp/getMoney-roler.html";
+    htmlVC.htmlUrl = @"https://www.tiantianxcn.com/html5/forapp/getMoney-roler.html";
     htmlVC.htmlTitle = @"返现规则";
     [self.navigationController pushViewController:htmlVC animated:YES];
 }
