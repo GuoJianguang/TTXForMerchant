@@ -33,7 +33,6 @@
     [self removeFromSuperview];
 }
 
-
 - (IBAction)sureBtn:(UIButton *)sender {
     NSDictionary *pramrs = @{@"token":[TTXUserInfo shareUserInfos].token,
                              @"phone":NullToSpace(self.phoneLabel.text),

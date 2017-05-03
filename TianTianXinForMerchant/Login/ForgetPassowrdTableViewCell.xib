@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,25 +17,25 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="604"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="603.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="603"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnO-zz-gwM">
-                        <rect key="frame" x="38" y="62" width="244" height="48.5"/>
+                        <rect key="frame" x="38" y="62" width="244" height="48"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_input" translatesAutoresizingMaskIntoConstraints="NO" id="luW-qN-9ev">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="48.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="48"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_phone_resgist" translatesAutoresizingMaskIntoConstraints="NO" id="iMb-NS-CR2">
                                 <rect key="frame" x="15" y="15" width="15" height="18"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LAF-mV-Dw5">
-                                <rect key="frame" x="38" y="0.0" width="206" height="48.5"/>
+                                <rect key="frame" x="38" y="0.0" width="206" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="LAF-mV-Dw5" secondAttribute="bottom" id="0qx-eK-GYu"/>
                             <constraint firstItem="luW-qN-9ev" firstAttribute="top" secondItem="HnO-zz-gwM" secondAttribute="top" id="1hx-eL-gWk"/>
@@ -53,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="244" height="48"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_auth_code" translatesAutoresizingMaskIntoConstraints="NO" id="hCK-LW-8Td">
-                                <rect key="frame" x="15" y="14" width="15" height="18"/>
+                                <rect key="frame" x="15" y="15" width="15" height="18"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="图片验证" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GTe-ry-ecv">
                                 <rect key="frame" x="38" y="0.0" width="102" height="48"/>
@@ -67,14 +71,14 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
                                 <state key="normal" title="点击获取">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="graphBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s01-y4-CnX"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GTe-ry-ecv" firstAttribute="leading" secondItem="hCK-LW-8Td" secondAttribute="trailing" constant="8" id="1Iw-i8-6OL"/>
                             <constraint firstItem="71v-Yg-TIG" firstAttribute="leading" secondItem="7C1-tt-Uxm" secondAttribute="leading" id="8ax-k7-z1g"/>
@@ -92,34 +96,34 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-Q7-eHl">
-                        <rect key="frame" x="38" y="185" width="244" height="48.5"/>
+                        <rect key="frame" x="38" y="186" width="244" height="48"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_input" translatesAutoresizingMaskIntoConstraints="NO" id="BVG-tG-3Ji">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="48.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="48"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_auth_code" translatesAutoresizingMaskIntoConstraints="NO" id="Ra3-hL-Em5">
-                                <rect key="frame" x="15" y="15" width="15" height="18"/>
+                                <rect key="frame" x="15" y="14" width="15" height="18"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-Zk-2cO">
-                                <rect key="frame" x="38" y="0.0" width="91" height="48.5"/>
+                                <rect key="frame" x="38" y="0.0" width="91" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sL-g5-ehl">
-                                <rect key="frame" x="149" y="11" width="80" height="25.5"/>
+                                <rect key="frame" x="149" y="11" width="80" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="MqD-Jv-hBj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="发送验证码">
-                                    <color key="titleColor" red="0.43137254899999999" green="0.4549019608" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.43137254899999999" green="0.4549019608" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="verifi_btn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wzw-b7-Nye"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BVG-tG-3Ji" firstAttribute="leading" secondItem="aO8-Q7-eHl" secondAttribute="leading" id="6j7-0t-6hS"/>
                             <constraint firstItem="Ra3-hL-Em5" firstAttribute="centerY" secondItem="aO8-Q7-eHl" secondAttribute="centerY" id="9hq-I8-pWD"/>
@@ -143,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="244" height="48"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_password" translatesAutoresizingMaskIntoConstraints="NO" id="Ixa-ZK-VTQ">
-                                <rect key="frame" x="15" y="14" width="15" height="18"/>
+                                <rect key="frame" x="15" y="15" width="15" height="18"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="新密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8uA-5r-GsU">
                                 <rect key="frame" x="38" y="0.0" width="206" height="48"/>
@@ -151,7 +155,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8uA-5r-GsU" firstAttribute="top" secondItem="A7S-6L-PPg" secondAttribute="top" id="Eo6-DK-nvv"/>
                             <constraint firstItem="8uA-5r-GsU" firstAttribute="leading" secondItem="Ixa-ZK-VTQ" secondAttribute="trailing" constant="8" id="MGN-uk-JEb"/>
@@ -180,7 +184,7 @@
                                 <rect key="frame" x="15" y="15" width="15" height="18"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zyb-46-Xz6" firstAttribute="centerY" secondItem="7vS-Fw-1cL" secondAttribute="centerY" id="DIP-Ee-S7J"/>
                             <constraint firstAttribute="bottom" secondItem="de7-F5-w27" secondAttribute="bottom" id="P5s-XX-gs8"/>
@@ -195,13 +199,13 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOR-i2-ZX7">
-                        <rect key="frame" x="25" y="408" width="270" height="68.5"/>
+                        <rect key="frame" x="25" y="408" width="270" height="68"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="cOR-i2-ZX7" secondAttribute="height" multiplier="927:235" id="pSM-yf-146"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" title="完    成" backgroundImage="btn_1_nor">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
                             <action selector="login_btn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vdq-yp-zDg"/>
